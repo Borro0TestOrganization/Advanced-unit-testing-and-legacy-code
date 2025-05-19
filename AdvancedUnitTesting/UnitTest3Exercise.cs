@@ -1,53 +1,8 @@
+using CustomerStore;
+
 namespace UnitTest3Exercise;
 
-public enum Product
-{
-    Shampoo
-}
-
-public class Store
-{
-    private readonly Dictionary<Product, int> products = [];
-
-    public void AddInventory(Product product, int quantity)
-    {
-        if (products.TryGetValue(product, out int value))
-        {
-            products[product] = value + quantity;
-        }
-        else
-        {
-            products[product] = quantity;
-        }
-    }
-
-    public void RemoveInventory(Product product, int quantity)
-    {
-        products[product] = products[product] - quantity;
-    }
-
-    public int GetInventory(Product product)
-    {
-        return products[product];
-    }
-}
-
-public class Customer
-{
-    public bool Purchase(Store store, Product product, int quantity)
-    {
-        if (store.GetInventory(product) > quantity)
-        {
-            store.RemoveInventory(product, quantity);
-            return true;
-        }
-
-        return false;
-    }
-}
-
-
-public class CustomerTests
+public class AvoidHardCouplingBetweenTests
 {
     private Store store;
     private Customer sut;
