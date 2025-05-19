@@ -20,6 +20,6 @@ public class Simple_AAA_pattern
     [Test]
     public void The_sum_of_two_numbers_can_be_calculated()
     {
-        // Create  test with the Arrange / Act / Assert pattern here...
+        // Create test with the Arrange / Act / Assert pattern here...
     }
 }
