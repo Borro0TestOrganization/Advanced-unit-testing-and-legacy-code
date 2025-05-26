@@ -1,8 +1,7 @@
-using NUnit.Framework;
 using NSubstitute;
-using System;
+using UnitTest4AdvancedCustomerStore;
 
-namespace UnitTest4AdvancedCustomerStore;
+namespace UnitTest4LondonSchoolTest;
 
 [TestFixture]
 public class CustomerTests

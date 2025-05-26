@@ -1,7 +1,6 @@
-using NUnit.Framework;
-using System;
+using UnitTest4AdvancedCustomerStore;
 
-namespace UnitTest4AdvancedCustomerStore;
+namespace UnitTest4ClassicalSchoolTest;
 
 [TestFixture]
 public class CustomerClassicalHardcodedTests
