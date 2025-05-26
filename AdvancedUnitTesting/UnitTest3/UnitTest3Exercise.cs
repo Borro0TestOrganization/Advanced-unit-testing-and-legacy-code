@@ -1,6 +1,4 @@
-using CustomerStore;
-
-namespace UnitTest3Exercise;
+namespace AdvancedUnitTesting.UnitTest3;
 
 public class AvoidHardCouplingBetweenTests
 {

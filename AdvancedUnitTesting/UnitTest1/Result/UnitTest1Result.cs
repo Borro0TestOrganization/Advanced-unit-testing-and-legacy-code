@@ -1,4 +1,4 @@
-namespace UnitTest1Exercise;
+namespace AdvancedUnitTesting.UnitTest1.Result;
 
 public class Calculator
 {
@@ -20,6 +20,15 @@ public class Simple_AAA_pattern
     [Test]
     public void The_sum_of_two_numbers_can_be_calculated()
     {
-        // Create test with the Arrange / Act / Assert pattern here...
+        // Arrange
+        double first = 10;
+        double second = 20;
+        var sut = new Calculator();
+
+        // Act
+        var result = sut.Sum(first, second);
+
+        // Assert
+        Assert.That(result, Is.EqualTo(30));
     }
 }

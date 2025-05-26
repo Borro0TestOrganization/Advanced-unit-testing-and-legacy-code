@@ -1,7 +1,6 @@
 using NSubstitute;
-using UnitTest4AdvancedCustomerStore;
 
-namespace UnitTest4LondonSchoolTest;
+namespace AdvancedUnitTesting.UnitTest4;
 
 [TestFixture]
 public class CustomerTests

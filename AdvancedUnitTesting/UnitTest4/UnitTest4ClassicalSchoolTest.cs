@@ -1,6 +1,4 @@
-using UnitTest4AdvancedCustomerStore;
-
-namespace UnitTest4ClassicalSchoolTest;
+namespace AdvancedUnitTesting.UnitTest4;
 
 [TestFixture]
 public class CustomerClassicalHardcodedTests

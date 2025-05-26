@@ -1,4 +1,4 @@
-namespace CustomerStore;
+namespace AdvancedUnitTesting.UnitTest3;
 
 public class Store
 {

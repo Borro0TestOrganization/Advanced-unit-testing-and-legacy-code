@@ -1,4 +1,4 @@
-namespace UnitTest2Exercise;
+namespace AdvancedUnitTesting.UnitTest2;
 
 public class Calculator
 {

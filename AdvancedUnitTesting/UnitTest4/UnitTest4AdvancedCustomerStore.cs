@@ -1,4 +1,4 @@
-namespace UnitTest4AdvancedCustomerStore;
+namespace AdvancedUnitTesting.UnitTest4;
 
 public interface IStore
 {

@@ -1,6 +1,4 @@
-using CustomerStore;
-
-namespace UnitTest3Result;
+namespace AdvancedUnitTesting.UnitTest3.Result;
 
 
 public class AvoidHardCouplingBetweenTests
