@@ -52,63 +52,6 @@ public enum Product
     Book
 }
 
-public interface IBankAccount
-{
-    double CurrentBalance { get; }
-    void Deposit(double amount);
-    void Withdraw(double amount);
-}
-
-public class BankAccount : IBankAccount
-{
-    public double CurrentBalance { get; private set; }
-
-    public BankAccount(double initialBalance)
-    {
-        CurrentBalance = initialBalance;
-    }
-
-    public void Deposit(double amount)
-    {
-        CurrentBalance += amount;
-    }
-
-    public void Withdraw(double amount)
-    {
-        if (CurrentBalance < amount)
-        {
-            throw new InvalidOperationException("Insufficient funds");
-        }
-        CurrentBalance -= amount;
-    }
-}
-
-public interface IPriceCalculator
-{
-    double CalculatePrice(Product product, MembershipType membershipType);
-}
-
-public class PriceCalculator : IPriceCalculator
-{
-    public double CalculatePrice(Product product, MembershipType membershipType)
-    {
-        switch (product)
-        {
-            case Product.Shampoo:
-                return membershipType == MembershipType.Premium ? 9.00 : 10.00;
-            case Product.Book:
-                return membershipType == MembershipType.Premium ? 18.00 : 20.00;
-            default:
-                throw new ArgumentException($"Unknown product: {product}");
-        }
-    }
-}
-
-public enum MembershipType
-{
-    Regular,
-    Premium
-}
 
 public interface ICustomer
 {
@@ -118,16 +61,10 @@ public interface ICustomer
 public class Customer : ICustomer
 {
     private readonly IStore _store;
-    private readonly IBankAccount _bankAccount;
-    private readonly IPriceCalculator _priceCalculator;
-    private readonly MembershipType _membershipType;
 
-    public Customer(IStore store, IBankAccount bankAccount, IPriceCalculator priceCalculator, MembershipType membershipType)
+    public Customer(IStore store)
     {
         _store = store;
-        _bankAccount = bankAccount;
-        _priceCalculator = priceCalculator;
-        _membershipType = membershipType;
     }
 
     public bool Purchase(Product product, int quantity)
@@ -137,11 +74,9 @@ public class Customer : ICustomer
             return false;
         }
 
-        double price = _priceCalculator.CalculatePrice(product, _membershipType) * quantity;
 
         try
         {
-            _bankAccount.Withdraw(price);
             _store.RemoveInventory(product, quantity);
             return true;
         }
