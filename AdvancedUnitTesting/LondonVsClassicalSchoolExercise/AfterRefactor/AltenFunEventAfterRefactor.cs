@@ -1,4 +1,4 @@
-namespace AdvancedUnitTesting.LondonVsClassicalSchoolExercise;
+namespace AdvancedUnitTesting.LondonVsClassicalSchoolExercise.AfterRefactor;
 
 public record Employee
 {
@@ -14,7 +14,7 @@ public record Employee
 public interface IAltenFunEvent
 {
     bool DoSignUp(Employee employee);
-    int GetTeamForParticipant(string participant);
+    string ReportParticipants();
 }
 
 public class AltenFunEvent : IAltenFunEvent
@@ -45,6 +45,23 @@ public class AltenFunEvent : IAltenFunEvent
         }
 
         return false;
+    }
+
+    public string ReportParticipants()
+    {
+        string result = "";
+        result += "Team 1:" + Environment.NewLine;
+        foreach (Employee employee in _team1)
+        {
+            result += employee.Name + Environment.NewLine;
+        }
+        result += "Team 2:" + Environment.NewLine;
+        foreach (Employee employee in _team2)
+        {
+            result += employee.Name + Environment.NewLine;
+        }
+
+        return result.Trim();
     }
 
     private bool AssignBusinessManagerToTeam(Employee employee)
@@ -82,21 +99,6 @@ public class AltenFunEvent : IAltenFunEvent
 
         return result;
     }
-
-    public int GetTeamForParticipant(string participant)
-    {
-        if (_team1.Any(employee => employee.Name == participant))
-        {
-            return 1;
-        }
-
-        if (_team2.Any(employee => employee.Name == participant))
-        {
-            return 2;
-        }
-
-        return -1;
-    }
 }
 
 public enum EmployeeType
@@ -129,47 +131,21 @@ public class FunEventHost
 {
     private readonly IAltenFunEvent _altenFunEvent;
     private readonly EmployeeDatabase _employeeDatabase;
-    List<string> _participants;
 
     public FunEventHost(IAltenFunEvent altenFunEvent)
     {
         _altenFunEvent = altenFunEvent;
         _employeeDatabase = new EmployeeDatabase();
-        _participants = [];
     }
 
     public void RequestToJoin(string name)
     {
         var employee = _employeeDatabase.FindEmployeeByName(name);
-        bool isSignedUp = _altenFunEvent.DoSignUp(employee);
-        if (isSignedUp)
-        {
-            _participants.Add(name);
-        }
+        _altenFunEvent.DoSignUp(employee);
     }
 
     public string ReportParticipants()
     {
-        string result = "";
-        result += "Team 1:" + Environment.NewLine;
-        foreach (string participant in _participants)
-        {
-            int team = _altenFunEvent.GetTeamForParticipant(participant);
-            if (team == 1)
-            {
-                result += participant + Environment.NewLine;
-            }
-        }
-        result += "Team 2:" + Environment.NewLine;
-        foreach (string participant in _participants)
-        {
-            int team = _altenFunEvent.GetTeamForParticipant(participant);
-            if (team == 2)
-            {
-                result += participant + Environment.NewLine;
-            }
-        }
-
-        return result.Trim();
+        return _altenFunEvent.ReportParticipants();
     }
 }
