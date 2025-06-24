@@ -18,12 +18,8 @@ public class Test4
 
         string sandwich = sut.Make(sandwichRecipe);
 
-        Assert.That(sandwich, Is.EqualTo(
-            """
-            Bread: White
-            Filling: Ham
-            Sauce: Truffle mayonnaise
+        var expected_result = File.ReadAllText("result.txt");
 
-            """));
+        Assert.That(sandwich, Is.EqualTo(expected_result));
     }
 }
