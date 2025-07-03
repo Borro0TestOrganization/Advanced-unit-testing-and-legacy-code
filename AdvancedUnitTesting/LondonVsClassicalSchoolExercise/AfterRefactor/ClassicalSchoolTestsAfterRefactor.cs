@@ -6,7 +6,8 @@ public class ClassicalSchoolTestsAfterRefactor
     public void People_will_be_signed_up_for_the_event_first_come_first_serve()
     {
         // Arrange
-        var altenFunEvent = new AltenFunEvent(4);
+        var maxAmountOfParticipants = 4;
+        var altenFunEvent = new AltenFunEvent(maxAmountOfParticipants);
         var sut = new FunEventHost(altenFunEvent);
 
         sut.RequestToJoin("Alice");     // Consultant
@@ -35,7 +36,8 @@ public class ClassicalSchoolTestsAfterRefactor
     public void Only_one_business_manager_per_team()
     {
         // Arrange
-        var altenFunEvent = new AltenFunEvent(4);
+        var maxAmountOfParticipants = 4;
+        var altenFunEvent = new AltenFunEvent(maxAmountOfParticipants);
         var sut = new FunEventHost(altenFunEvent);
 
         sut.RequestToJoin("Hanneke");   // Business Manager

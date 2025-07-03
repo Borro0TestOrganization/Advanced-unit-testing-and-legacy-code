@@ -1,5 +1,6 @@
-// Change vscode color theme to Light+ to get a nice color scheme to copy into slides
-// Paste into powerpoint by making a new textbox, paste with keep source formatting, change font size to 13
+// Change vscode color theme to Light+ to get a nice color scheme to copy into slides.
+// Paste into powerpoint by making a new textbox, paste with keep source formatting, change font size to 14.
+// In Home -> Paragraph -> Line Spacing you can correct the line spacing if needed.
 namespace AdvancedUnitTesting.ResistanceToRefactoringExample;
 
 public class SandwichRecipe
