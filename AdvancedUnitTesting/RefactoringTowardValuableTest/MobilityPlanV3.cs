@@ -3,9 +3,9 @@
 // In Home -> Paragraph -> Line Spacing you can correct the line spacing if needed.
 using System.Data;
 
-namespace AdvancedUnitTesting.RefactoringTowardValuableTest.OverComplicated.MobilityPlan.V2;
+namespace AdvancedUnitTesting.RefactoringTowardValuableTest.OverComplicated.MobilityPlan.V3;
 
-// Introduce controller class
+// Awkward responsibility, consultant returns number of cars...
 public class ConsultantController
 {
     private readonly Database _database = new Database();
@@ -24,7 +24,7 @@ public class ConsultantController
         int newNumberOfLeaseCars = consultant.ChangeMobilityPlan(
             newMobilityPlan, DateTime.Now, numberOfLeaseCars);
 
-        _database.StoreNumberOfLeaseCars(newNumberOfLeaseCars);
+        _database.SaveNumberOfLeaseCars(newNumberOfLeaseCars);
         _database.SaveConsultant(consultant);
         _messageBus.SendMobilityPlanChangeRequestProcessed(consultantId);
 
@@ -51,13 +51,15 @@ public class Consultant
         if (MobilityPlan == newMobilityPlan)
             return numberOfLeaseCars;
 
+        bool isDecember = DateTime.Now.Month == 12;
+
         TimeSpan timeSinceLastChange = now - DateLastMobilityPlanChange;
-        if (timeSinceLastChange > TimeSpan.FromDays(4 * 365))
+        if (!isDecember && timeSinceLastChange > TimeSpan.FromDays(4 * 365))
         {
             DateLastMobilityPlanChange = now;
             MobilityPlan = newMobilityPlan;
 
-            int delta = newMobilityPlan == MobilityPlan.LeaseCard ? 1 : -1;
+            int delta = newMobilityPlan == MobilityPlan.LeaseCar ? 1 : -1;
             numberOfLeaseCars += delta;
         }
 
@@ -65,9 +67,54 @@ public class Consultant
     }
 }
 
+public class AltenLeaseCarFleet
+{
+    public AltenLeaseCarFleet(int numberOfLeaseCars)
+    {
+        NumberOfLeaseCars = numberOfLeaseCars;
+    }
+
+    public int NumberOfLeaseCars { get; private set; }
+
+    public bool IsAllowedToChangeNumberOfLeaseCars(DateTime now)
+    {
+        return now.Month != 12;
+    }
+
+    public void ChangeNumberOfLeaseCars(int delta)
+    {
+        NumberOfLeaseCars += delta;
+    }
+}
+
+public class AltenLeaseCarFleetFactory
+{
+    public static AltenLeaseCarFleet Create(object[] data)
+    {
+        int numberOfLeaseCars = (int)data[0];
+
+        return new AltenLeaseCarFleet(numberOfLeaseCars);
+    }
+}
+
+public class ConsultantFactory
+{
+    public static Consultant Create(object[] data)
+    {
+        int id = (int)data[0];
+        MobilityPlan mobilityPlan = (MobilityPlan)data[1];
+        DateTime dateLastMobilityPlanChange = (DateTime)data[2];
+
+        return new Consultant(
+            id, mobilityPlan, dateLastMobilityPlanChange);
+    }
+}
+
+
+
 public enum MobilityPlan
 {
-    LeaseCard,
+    LeaseCar,
     FixedBudget
 }
 
@@ -111,7 +158,7 @@ class Database
         throw new NotImplementedException();
     }
 
-    internal void StoreNumberOfLeaseCars(int v)
+    internal void SaveNumberOfLeaseCars(int v)
     {
         throw new NotImplementedException();
     }

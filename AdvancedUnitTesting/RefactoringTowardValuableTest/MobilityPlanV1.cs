@@ -30,8 +30,8 @@ public class Consultant
             MobilityPlan = newMobilityPlan;
 
             int numberOfLeaseCars = Database.GetNumberOfLeaseCars();
-            int delta = newMobilityPlan == MobilityPlan.LeaseCard ? 1 : -1;
-            Database.StoreNumberOfLeaseCars(numberOfLeaseCars + delta);
+            int delta = newMobilityPlan == MobilityPlan.LeaseCar ? 1 : -1;
+            Database.SaveNumberOfLeaseCars(numberOfLeaseCars + delta);
             Database.SaveConsultant(this);
         }
 
@@ -41,7 +41,7 @@ public class Consultant
 
 public enum MobilityPlan
 {
-    LeaseCard,
+    LeaseCar,
     FixedBudget
 }
 
@@ -85,7 +85,7 @@ static class Database
         throw new NotImplementedException();
     }
 
-    internal static void StoreNumberOfLeaseCars(int v)
+    internal static void SaveNumberOfLeaseCars(int v)
     {
         throw new NotImplementedException();
     }
