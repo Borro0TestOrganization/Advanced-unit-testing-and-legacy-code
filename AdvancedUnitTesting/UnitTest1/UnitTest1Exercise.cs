@@ -9,6 +9,7 @@ public class Calculator
 }
 
 // How to write assertions with NUnit:
+
 // Assert.That(actual, Is.EqualTo(expected));        // Equality
 // Assert.That(value, Is.Not.Null);                  // Not null
 // Assert.That(list, Has.Count.EqualTo(3));          // Collection count
@@ -23,3 +24,4 @@ public class Simple_AAA_pattern
         // Create test with the Arrange / Act / Assert pattern here...
     }
 }
+
