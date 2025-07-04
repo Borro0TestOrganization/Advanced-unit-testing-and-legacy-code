@@ -7,6 +7,7 @@ public class AvoidHardCouplingBetweenTests
 
 
     [SetUp]
+    // Remove the shared setup function - replace with helper method
     public void SetUp()
     {
         store = new Store();
