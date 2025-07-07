@@ -50,16 +50,14 @@ public class Consultant
 
 internal class AltenTraining
 {
-    private string v;
     private int _availableSpots;
 
     public AltenTraining()
     {
     }
 
-    public AltenTraining(string v)
+    public AltenTraining(string _)
     {
-        this.v = v;
     }
 
     internal int GetAvailableSpots()

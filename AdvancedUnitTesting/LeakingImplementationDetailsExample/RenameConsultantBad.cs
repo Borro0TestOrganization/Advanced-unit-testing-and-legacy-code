@@ -2,6 +2,7 @@
 // Paste into powerpoint by making a new textbox, paste with keep source formatting, change font size to 14.
 // In Home -> Paragraph -> Line Spacing you can correct the line spacing if needed.
 namespace AdvancedUnitTesting.LeakingImplementationDetailsExample.Bad;
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 
 public class Consultant
 {
@@ -16,6 +17,7 @@ public class Consultant
     }
 }
 
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 public class BusinessManager
 {
     public void RenameConsultant(int consultantId, string newName)
