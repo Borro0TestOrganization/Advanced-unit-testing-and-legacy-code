@@ -61,19 +61,19 @@ public class EmailService
 public class StylesOfUnitTestExercise
 {
     [Test]
-    public void An_employee_may_sign_up_to_an_event_that_is_not_full()
+    public void OUTPUT_BASED_An_employee_may_sign_up_to_an_event_that_is_not_full()
     {
         // Write an output based unit test (with AAA pattern)
     }
 
     [Test]
-    public void The_number_of_participants_increments_when_an_employee_successfully_signed_up()
+    public void STATE_BASED_The_number_of_participants_increases_by_1_when_an_employee_successfully_signed_up()
     {
         // Write state-based unit test (with AAA pattern)
     }
 
     [Test]
-    public void An_email_can_be_sent_to_all_participants()
+    public void COMMUNICATION_BASED_An_email_can_be_sent_to_all_participants()
     {
         // How would you write a communication based test?
         // Think about it, we will come back to it later when discussing `isolation`.

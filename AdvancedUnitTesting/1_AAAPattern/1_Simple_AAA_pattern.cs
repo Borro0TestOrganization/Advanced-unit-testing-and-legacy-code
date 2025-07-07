@@ -12,6 +12,7 @@ public class Calculator
 
 // Assert.That(actual, Is.EqualTo(expected));        // Equality
 // Assert.That(value, Is.Not.Null);                  // Not null
+// Assert.That(value, Is.True);                      // Is equal to True
 // Assert.That(list, Has.Count.EqualTo(3));          // Collection count
 // Assert.That(str, Does.Contain("test"));           // String contains
 // Assert.That(number, Is.InRange(1, 10));           // Value in range
