@@ -2,9 +2,7 @@
 // Paste into powerpoint by making a new textbox, paste with keep source formatting, change font size to 14.
 // In Home -> Paragraph -> Line Spacing you can correct the line spacing if needed.
 
-
-
-namespace AdvancedUnitTesting.AAAPattern;
+namespace AdvancedUnitTesting.AAAPattern.SlideExample;
 
 public class SimpleStore
 {

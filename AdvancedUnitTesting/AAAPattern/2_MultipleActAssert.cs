@@ -1,4 +1,4 @@
-namespace AdvancedUnitTesting.UnitTest2;
+namespace AdvancedUnitTesting.AAAPattern.MultipleActAssert;
 
 public class Calculator
 {

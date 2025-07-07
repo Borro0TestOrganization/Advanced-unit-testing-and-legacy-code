@@ -1,4 +1,4 @@
-namespace AdvancedUnitTesting.UnitTest3;
+namespace AdvancedUnitTesting.AAAPattern.RemoveSharedFixture;
 
 public class AvoidHardCouplingBetweenTests
 {

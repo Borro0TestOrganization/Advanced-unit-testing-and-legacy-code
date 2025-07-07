@@ -1,4 +1,4 @@
-namespace AdvancedUnitTesting.UnitTest1.Result;
+namespace AdvancedUnitTesting.AAAPattern.SimpleAAAPattern.Result;
 
 public class Calculator
 {
