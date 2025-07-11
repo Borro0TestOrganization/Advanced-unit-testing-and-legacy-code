@@ -1,5 +1,5 @@
-namespace LegacyCode._1_MethodSprout.Example.Result {
-    public class MethodSproutTests {
+namespace LegacyCode._2_ClassSprout.Example.Result {
+    public class ClassSproutTests {
         [Test]
         public void OnlineTraining_ShouldSetMeetingURL() {
             // Arrange
@@ -11,10 +11,10 @@ namespace LegacyCode._1_MethodSprout.Example.Result {
                 }
             };
 
-            TrainingScheduler scheduler = new TrainingScheduler();
+            TrainingLocationScheduler locationScheduler = new TrainingLocationScheduler();
 
             // Act
-            scheduler.SetMeetingLocations(trainings);
+            locationScheduler.SetMeetingLocations(trainings);
 
             // Assert
             Assert.NotNull(trainings[0].AgendaMeeting.MeetingURL);
@@ -40,10 +40,10 @@ namespace LegacyCode._1_MethodSprout.Example.Result {
                 }
             };
 
-            TrainingScheduler scheduler = new TrainingScheduler();
+            TrainingLocationScheduler locationScheduler = new TrainingLocationScheduler();
 
             // Act
-            scheduler.SetMeetingLocations(trainings);
+            locationScheduler.SetMeetingLocations(trainings);
 
             // Assert
             Assert.NotNull(trainings[0].AgendaMeeting.MeetingURL);

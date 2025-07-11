@@ -1,5 +1,5 @@
-namespace LegacyCode._1_MethodSprout.Example.Result {
-    public class MethodSproutTests {
+namespace LegacyCode._2_ClassSprout.Example.ResultWithInterfaces {
+    public class ClassSproutTests {
         [Test]
         public void OnlineTraining_ShouldSetMeetingURL() {
             // Arrange
@@ -10,11 +10,12 @@ namespace LegacyCode._1_MethodSprout.Example.Result {
                     AgendaMeeting = new AgendaMeeting("2025-06-01", "9:30", "17:00")
                 }
             };
+            TrainingDetail trainingDetail = new TrainingDetail(trainings);
 
-            TrainingScheduler scheduler = new TrainingScheduler();
+            ITrainingScheduler locationScheduler = new TrainingLocationScheduler();
 
             // Act
-            scheduler.SetMeetingLocations(trainings);
+            locationScheduler.Schedule(trainingDetail);
 
             // Assert
             Assert.NotNull(trainings[0].AgendaMeeting.MeetingURL);
@@ -39,11 +40,12 @@ namespace LegacyCode._1_MethodSprout.Example.Result {
                     AgendaMeeting = new AgendaMeeting("2025-11-23", "8:30", "16:00")
                 }
             };
+            TrainingDetail trainingDetail = new TrainingDetail(trainings);
 
-            TrainingScheduler scheduler = new TrainingScheduler();
+            ITrainingScheduler locationScheduler = new TrainingLocationScheduler();
 
             // Act
-            scheduler.SetMeetingLocations(trainings);
+            locationScheduler.Schedule(trainingDetail);
 
             // Assert
             Assert.NotNull(trainings[0].AgendaMeeting.MeetingURL);
@@ -54,6 +56,25 @@ namespace LegacyCode._1_MethodSprout.Example.Result {
 
             Assert.IsNull(trainings[2].AgendaMeeting.MeetingURL);
             Assert.NotNull(trainings[2].AgendaMeeting.Location);
+        }
+
+        [Test]
+        public void Training_ShouldCreateAnAgendaMeeting() {
+            // Arrange
+            IList<Training> trainings = new List<Training>
+            {
+                new Training("2025-06-01", "9:30", "17:00",
+                    "https://microsoft.teams.com/a-very-fun-training", LocationType.Online)
+            };
+            TrainingDetail trainingDetail = new TrainingDetail(trainings);
+
+            ITrainingScheduler trainingScheduler = new TrainingAgendaMeetingScheduler();
+
+            // Act
+            trainingScheduler.Schedule(trainingDetail);
+
+            // Assert
+            Assert.NotNull(trainings[0].AgendaMeeting);
         }
     }
 }
