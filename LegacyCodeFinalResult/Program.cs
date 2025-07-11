@@ -1,4 +1,4 @@
-﻿using LegacyCodeFinal;
+﻿using LegacyCodeFinalResult;
 
 Park jurassicPark = new Park("Jurassic Park", 50000000);
 

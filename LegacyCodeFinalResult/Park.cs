@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace LegacyCodeFinal {
+namespace LegacyCodeFinalResult {
     public class Park {
         private string _name;
         private decimal _balance;

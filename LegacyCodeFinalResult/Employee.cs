@@ -1,4 +1,4 @@
-﻿namespace LegacyCodeFinal {
+﻿namespace LegacyCodeFinalResult {
     internal class Employee {
         private static int NEXT_ID = 1;
 

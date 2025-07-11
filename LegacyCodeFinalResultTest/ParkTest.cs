@@ -1,6 +1,6 @@
-using LegacyCodeFinal;
+using LegacyCodeFinalResult;
 
-namespace LegacyCodeFinalTest {
+namespace LegacyCodeFinalResultTest {
     public class ParkTest {
         [Test]
         public void JurassicParkTest() {
