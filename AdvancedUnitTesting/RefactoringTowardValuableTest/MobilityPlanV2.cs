@@ -3,7 +3,7 @@
 // In Home -> Paragraph -> Line Spacing you can correct the line spacing if needed.
 using System.Data;
 
-namespace AdvancedUnitTesting.RefactoringTowardValuableTest.OverComplicated.MobilityPlan.V2;
+namespace AdvancedUnitTesting.RefactoringTowardValuableTest.V2;
 
 // Introduce controller class
 public class ConsultantController

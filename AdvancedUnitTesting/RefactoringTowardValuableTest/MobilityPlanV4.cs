@@ -3,7 +3,7 @@
 // In Home -> Paragraph -> Line Spacing you can correct the line spacing if needed.
 using System.Data;
 
-namespace AdvancedUnitTesting.RefactoringTowardValuableTest.OverComplicated.MobilityPlan.V4;
+namespace AdvancedUnitTesting.RefactoringTowardValuableTest.V4;
 
 // Controller after refactoring
 public class ConsultantController
@@ -63,6 +63,13 @@ public class Consultant
     }
 }
 
+public enum MobilityPlan
+{
+    LeaseCar,
+    FixedBudget
+}
+
+
 public class AltenLeaseCarFleet
 {
     public AltenLeaseCarFleet(int numberOfLeaseCars)
@@ -79,7 +86,17 @@ public class AltenLeaseCarFleet
 
     public void ChangeNumberOfLeaseCars(int delta)
     {
+        Precondition.Requires(NumberOfLeaseCars + delta >= 0);
+
         NumberOfLeaseCars += delta;
+    }
+}
+
+public class Precondition
+{
+    internal static void Requires(bool v)
+    {
+        throw new NotImplementedException();
     }
 }
 
@@ -104,14 +121,6 @@ public class ConsultantFactory
         return new Consultant(
             id, mobilityPlan, dateLastMobilityPlanChange);
     }
-}
-
-
-
-public enum MobilityPlan
-{
-    LeaseCar,
-    FixedBudget
 }
 
 
