@@ -21,4 +21,9 @@
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="3_MethodWrap\" />
+    <Folder Include="4_ClassWrap\" />
+  </ItemGroup>
+
 </Project>

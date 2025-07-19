@@ -87,8 +87,8 @@ namespace LegacyCodeFinalResult {
 
                         stringBuilder.AppendLine("-------Dino's-------");
                         stringBuilder.AppendLine("Park:   " + _name);
-                        stringBuilder.AppendLine("Year:   " + j);
-                        stringBuilder.AppendLine("Period: " + p);
+                        stringBuilder.AppendLine("Year:   " + i);
+                        stringBuilder.AppendLine("Period: " + j);
                         decimal d = 0;
 
                         foreach (KeyValuePair<string, (int, decimal)> pet in _pets) {
