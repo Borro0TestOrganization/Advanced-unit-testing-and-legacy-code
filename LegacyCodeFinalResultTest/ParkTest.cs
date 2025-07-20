@@ -5,6 +5,23 @@ namespace LegacyCodeFinalResultTest
     public class ParkTest
     {
         [Test]
+        public void SimpleTest()
+        {
+            // Arrange
+            Park jurassicPark = new Park("Jurassic Park", 50000000);
+
+            jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);
+
+            jurassicPark.AddDinosaur("Tyrannosaurus", 1, 8000);
+
+            // Act
+            string result = jurassicPark.Run(1);
+
+            // Assert
+            Assert.That(result, Is.EqualTo("123"));
+        }
+
+        [Test]
         public void JurassicParkTest()
         {
             // Arrange

@@ -7,9 +7,9 @@ namespace LegacyCodeFinalResult
         private string _name;
         private decimal _balance;
         private List<Employee> _employees;
-        private Dictionary<string, (int, decimal)> _pets;
-        private decimal _s;
-        private string _hist;
+        private Dictionary<string, (int Amount, decimal Cost)> _dinosaurs;
+        private decimal _score;
+        private string _log;
 
         public Park(string name, decimal balance)
         {
@@ -17,7 +17,7 @@ namespace LegacyCodeFinalResult
             _balance = balance;
 
             _employees = new List<Employee>();
-            _pets = new Dictionary<string, (int, decimal)>();
+            _dinosaurs = new Dictionary<string, (int, decimal)>();
         }
 
         public void AddEmployee(string name, decimal salary, EmployeeRole role)
@@ -25,7 +25,7 @@ namespace LegacyCodeFinalResult
             _employees.Add(new Employee(name, salary, role));
         }
 
-        public void Pay(int year, int period)
+        public void PayEmployees(int year, int period)
         {
             StringBuilder stringBuilder = new StringBuilder();
 
@@ -50,54 +50,54 @@ namespace LegacyCodeFinalResult
             _balance -= totalWages;
             stringBuilder.AppendLine("Total weges: " + totalWages);
 
-            _hist += stringBuilder.ToString();
+            _log += stringBuilder.ToString();
         }
 
         public void AddDinosaur(string n, int a, decimal c)
         {
-            _pets.Add(n, (a, c));
+            _dinosaurs.Add(n, (a, c));
         }
 
         public void DinosaurAdded(string n)
         {
-            _hist += "\n" + n + " added";
-            _pets[n] = (_pets[n].Item1 + 1, _pets[n].Item2);
-            _s += 1;
+            _log += "\n" + n + " added";
+            _dinosaurs[n] = (_dinosaurs[n].Amount + 1, _dinosaurs[n].Cost);
+            _score += 1;
         }
 
         public void DinosaurDied(string n)
         {
-            _hist += "\n" + n + " died";
-            _pets[n] = (_pets[n].Item1 - 1, _pets[n].Item2);
-            _s -= 1;
+            _log += "\n" + n + " died";
+            _dinosaurs[n] = (_dinosaurs[n].Amount - 1, _dinosaurs[n].Cost);
+            _score -= 1;
         }
 
-        public string Run(int amount)
+        public string Run(int totalNumberOfYears)
         {
-            _hist = string.Empty;
+            _log = string.Empty;
 
-            for (int year = 0; year < amount; year++)
+            for (int year = 0; year < totalNumberOfYears; year++)
             {
                 string n;
-                int p;
-                int r = new Random().Next(0, 100);
+                int numberOfGuests;
+                int randomBetween0and100 = new Random().Next(0, 100);
 
                 for (int period = 0; period < 13; period++)
                 {
-                    for (int k = 0; k < 4; k++)
+                    for (int week = 0; week < 4; week++)
                     {
-                        if (r > 50)
+                        if (randomBetween0and100 > 50)
                         {
-                            p = new Random().Next(1, 4) * r;
+                            numberOfGuests = new Random().Next(1, 4) * randomBetween0and100;
                         }
                         else
                         {
-                            p = new Random().Next(75, 100);
+                            numberOfGuests = new Random().Next(75, 100);
                         }
 
-                        _hist += "\nGuests: " + p;
-                        _hist += "\nIncome: " + p * 10000;
-                        _balance += p * 10000;
+                        _log += "\nGuests: " + numberOfGuests;
+                        _log += "\nIncome: " + numberOfGuests * 10000;
+                        _balance += numberOfGuests * 10000;
 
                         StringBuilder stringBuilder = new StringBuilder();
 
@@ -105,60 +105,53 @@ namespace LegacyCodeFinalResult
                         stringBuilder.AppendLine("Park:   " + _name);
                         stringBuilder.AppendLine("Year:   " + year);
                         stringBuilder.AppendLine("Period: " + period);
-                        decimal d = 0;
+                        decimal dinosaurCosts = 0;
 
-                        foreach (KeyValuePair<string, (int, decimal)> dinosaur in _pets)
+                        foreach (KeyValuePair<string, (int Amount, decimal Cost)> dinosaur in _dinosaurs)
                         {
                             stringBuilder.AppendLine("{");
                             stringBuilder.AppendLine("\tName:   " + dinosaur.Key);
-                            stringBuilder.AppendLine("\tAmount: " + dinosaur.Value.Item1);
-                            stringBuilder.AppendLine("\tCosts:  " + dinosaur.Value.Item2);
+                            stringBuilder.AppendLine("\tAmount: " + dinosaur.Value.Amount);
+                            stringBuilder.AppendLine("\tCosts:  " + dinosaur.Value.Cost);
                             stringBuilder.AppendLine("}");
 
-                            d += dinosaur.Value.Item1 * dinosaur.Value.Item2;
+                            dinosaurCosts += dinosaur.Value.Item1 * dinosaur.Value.Cost;
                         }
 
-                        _balance -= d;
-                        stringBuilder.AppendLine("Running costs: " + d);
+                        _balance -= dinosaurCosts;
+                        stringBuilder.AppendLine("Running costs: " + dinosaurCosts);
 
-                        _hist += "\n" + stringBuilder.ToString();
+                        _log += "\n" + stringBuilder.ToString();
                     }
 
-                    Pay(year, period);
+                    PayEmployees(year, period);
 
-                    _hist += "\n-------Balance-------";
-                    _hist += "\nBalance: " + _balance;
+                    _log += "\n-------Balance-------";
+                    _log += "\nBalance: " + _balance;
                 }
 
-                if (r < 10)
+                if (randomBetween0and100 < 10)
                 {
-                    n = _pets.Keys.ToArray()[new Random().Next(0, _pets.Keys.Count)];
+                    n = _dinosaurs.Keys.ToArray()[new Random().Next(0, _dinosaurs.Keys.Count)];
                     DinosaurDied(n);
-                    _s--;
+                    _score--;
                 }
 
-                if (r < 30 && r > 50)
+                if (randomBetween0and100 > 25 && randomBetween0and100 < 75)
                 {
-                    n = "Spinosaurus";
-                    AddDinosaur(n, 1, 10000);
-                    _s++;
-                }
-
-                if (r > 25 && r < 75)
-                {
-                    n = _pets.Keys.ToArray()[new Random().Next(0, _pets.Keys.Count)];
+                    n = _dinosaurs.Keys.ToArray()[new Random().Next(0, _dinosaurs.Keys.Count)];
                     if (!n.StartsWith("T"))
                     {
                         DinosaurAdded(n);
-                        _s++;
+                        _score++;
                     }
                 }
 
-                _hist += "\n--------Score--------";
-                _hist += "\nScore: " + _s;
+                _log += "\n--------Score--------";
+                _log += "\nScore: " + _score;
             }
 
-            return _hist;
+            return _log;
         }
     }
 }
