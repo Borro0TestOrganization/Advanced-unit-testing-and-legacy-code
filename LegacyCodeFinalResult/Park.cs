@@ -1,7 +1,9 @@
 ﻿using System.Text;
 
-namespace LegacyCodeFinalResult {
-    public class Park {
+namespace LegacyCodeFinalResult
+{
+    public class Park
+    {
         private string _name;
         private decimal _balance;
         private List<Employee> _employees;
@@ -9,7 +11,8 @@ namespace LegacyCodeFinalResult {
         private decimal _s;
         private string _hist;
 
-        public Park(string name, decimal balance) {
+        public Park(string name, decimal balance)
+        {
             _name = name;
             _balance = balance;
 
@@ -17,21 +20,24 @@ namespace LegacyCodeFinalResult {
             _pets = new Dictionary<string, (int, decimal)>();
         }
 
-        public void AddEmployee(string name, decimal salary, EmployeeRole role) {
+        public void AddEmployee(string name, decimal salary, EmployeeRole role)
+        {
             _employees.Add(new Employee(name, salary, role));
         }
 
-        public void Pay(int j, int p) {
+        public void Pay(int year, int period)
+        {
             StringBuilder stringBuilder = new StringBuilder();
 
             stringBuilder.AppendLine("-------Weges to pay-------");
             stringBuilder.AppendLine("Park:   " + _name);
-            stringBuilder.AppendLine("Year:   " + j);
-            stringBuilder.AppendLine("Period: " + p);
+            stringBuilder.AppendLine("Year:   " + year);
+            stringBuilder.AppendLine("Period: " + period);
 
             decimal totalWages = 0;
 
-            foreach (Employee employee in _employees) {
+            foreach (Employee employee in _employees)
+            {
                 stringBuilder.AppendLine("{");
                 stringBuilder.AppendLine("\tName:   " + employee.Name);
                 stringBuilder.AppendLine("\tRole:   " + employee.Role);
@@ -47,35 +53,45 @@ namespace LegacyCodeFinalResult {
             _hist += stringBuilder.ToString();
         }
 
-        public void AddPet(string n, int a, decimal c) {
+        public void AddDinosaur(string n, int a, decimal c)
+        {
             _pets.Add(n, (a, c));
         }
 
-        public void PetAdded(string n) {
+        public void DinosaurAdded(string n)
+        {
             _hist += "\n" + n + " added";
             _pets[n] = (_pets[n].Item1 + 1, _pets[n].Item2);
             _s += 1;
         }
 
-        public void PetDied(string n) {
+        public void DinosaurDied(string n)
+        {
             _hist += "\n" + n + " died";
             _pets[n] = (_pets[n].Item1 - 1, _pets[n].Item2);
             _s -= 1;
         }
 
-        public string Run(int amount) {
+        public string Run(int amount)
+        {
             _hist = string.Empty;
 
-            for (int i = 0; i < amount; i++) {
+            for (int year = 0; year < amount; year++)
+            {
                 string n;
                 int p;
                 int r = new Random().Next(0, 100);
 
-                for (int j = 0; j < 13; j++) {
-                    for (int k = 0; k < 4; k++) {
-                        if (r > 50) {
+                for (int period = 0; period < 13; period++)
+                {
+                    for (int k = 0; k < 4; k++)
+                    {
+                        if (r > 50)
+                        {
                             p = new Random().Next(1, 4) * r;
-                        } else {
+                        }
+                        else
+                        {
                             p = new Random().Next(75, 100);
                         }
 
@@ -87,18 +103,19 @@ namespace LegacyCodeFinalResult {
 
                         stringBuilder.AppendLine("-------Dino's-------");
                         stringBuilder.AppendLine("Park:   " + _name);
-                        stringBuilder.AppendLine("Year:   " + i);
-                        stringBuilder.AppendLine("Period: " + j);
+                        stringBuilder.AppendLine("Year:   " + year);
+                        stringBuilder.AppendLine("Period: " + period);
                         decimal d = 0;
 
-                        foreach (KeyValuePair<string, (int, decimal)> pet in _pets) {
+                        foreach (KeyValuePair<string, (int, decimal)> dinosaur in _pets)
+                        {
                             stringBuilder.AppendLine("{");
-                            stringBuilder.AppendLine("\tName:   " + pet.Key);
-                            stringBuilder.AppendLine("\tAmount: " + pet.Value.Item1);
-                            stringBuilder.AppendLine("\tCosts:  " + pet.Value.Item2);
+                            stringBuilder.AppendLine("\tName:   " + dinosaur.Key);
+                            stringBuilder.AppendLine("\tAmount: " + dinosaur.Value.Item1);
+                            stringBuilder.AppendLine("\tCosts:  " + dinosaur.Value.Item2);
                             stringBuilder.AppendLine("}");
 
-                            d += pet.Value.Item1 * pet.Value.Item2;
+                            d += dinosaur.Value.Item1 * dinosaur.Value.Item2;
                         }
 
                         _balance -= d;
@@ -107,28 +124,32 @@ namespace LegacyCodeFinalResult {
                         _hist += "\n" + stringBuilder.ToString();
                     }
 
-                    Pay(i, j);
+                    Pay(year, period);
 
                     _hist += "\n-------Balance-------";
                     _hist += "\nBalance: " + _balance;
                 }
 
-                if (r < 10) {
+                if (r < 10)
+                {
                     n = _pets.Keys.ToArray()[new Random().Next(0, _pets.Keys.Count)];
-                    PetDied(n);
+                    DinosaurDied(n);
                     _s--;
                 }
 
-                if (r < 30 && r > 50) {
+                if (r < 30 && r > 50)
+                {
                     n = "Spinosaurus";
-                    AddPet(n, 1, 10000);
+                    AddDinosaur(n, 1, 10000);
                     _s++;
                 }
 
-                if (r > 25 && r < 75) {
+                if (r > 25 && r < 75)
+                {
                     n = _pets.Keys.ToArray()[new Random().Next(0, _pets.Keys.Count)];
-                    if (!n.StartsWith("T")) {
-                        PetAdded(n);
+                    if (!n.StartsWith("T"))
+                    {
+                        DinosaurAdded(n);
                         _s++;
                     }
                 }
