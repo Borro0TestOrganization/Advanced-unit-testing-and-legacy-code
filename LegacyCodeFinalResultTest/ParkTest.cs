@@ -4,11 +4,17 @@ namespace LegacyCodeFinalResultTest
 {
     public class ParkTest
     {
+        public static string GetParentDirectory([System.Runtime.CompilerServices.CallerFilePath] string filePath = "")
+        {
+            return Path.GetDirectoryName(filePath);
+        }
+
         [Test]
         public void SimpleTest()
         {
             // Arrange
-            Park jurassicPark = new Park("Jurassic Park", 50000000);
+            FakeRandom fakeRandom = new FakeRandom(0);
+            Park jurassicPark = new Park("Jurassic Park", 50000000, fakeRandom);
 
             jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);
 
@@ -17,8 +23,8 @@ namespace LegacyCodeFinalResultTest
             // Act
             string result = jurassicPark.Run(1);
 
-            // Assert
-            Assert.IsNotEmpty(result);
+            string expected = File.ReadAllText(Path.Combine(GetParentDirectory(), "ExpectedSimpleTestResult.txt"));
+            Assert.That(result, Is.EqualTo(expected));
         }
 
         [Test]
@@ -48,8 +54,6 @@ namespace LegacyCodeFinalResultTest
 
             // Act
             string result = jurassicPark.Run(1);
-
-            Console.WriteLine(result);
 
             // Assert
             Assert.IsNotEmpty(result);

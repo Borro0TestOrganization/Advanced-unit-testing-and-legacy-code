@@ -1,0 +1,836 @@
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 0
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 0
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 0
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 0
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 0
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 51568000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 1
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 1
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 1
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 1
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 1
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 53136000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 2
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 2
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 2
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 2
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 2
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 54704000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 3
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 3
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 3
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 3
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 3
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 56272000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 4
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 4
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 4
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 4
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 4
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 57840000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 5
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 5
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 5
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 5
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 5
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 59408000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 6
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 6
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 6
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 6
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 6
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 60976000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 7
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 7
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 7
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 7
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 7
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 62544000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 8
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 8
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 8
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 8
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 8
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 64112000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 9
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 9
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 9
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 9
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 9
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 65680000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 10
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 10
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 10
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 10
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 10
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 67248000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 11
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 11
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 11
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 11
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 11
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 68816000
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 12
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 12
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 12
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+
+Guests: 75
+Income: 750000
+-------Dino's-------
+Park:   Jurassic Park
+Year:   0
+Period: 12
+{
+	Name:   Tyrannosaurus
+	Amount: 1
+	Costs:  8000
+}
+Running costs: 8000
+-------Weges to pay-------
+Park:   Jurassic Park
+Year:   0
+Period: 12
+{
+	Name:   John Hammond
+	Role:   Owner
+	Salary: 1400000
+}
+Total weges: 1400000
+
+-------Balance-------
+Balance: 70384000
+Tyrannosaurus died
+--------Score--------
+Score: -2
