@@ -11,13 +11,21 @@ namespace LegacyCodeFinalResult
         private decimal _score;
         private string _log;
 
-        public Park(string name, decimal balance)
+        private IRandom _random;
+
+        public Park(string name, decimal balance) : this(name, balance, new RealRandom())
+        {
+        }
+
+        public Park(string name, decimal balance, IRandom random)
         {
             _name = name;
             _balance = balance;
 
             _employees = new List<Employee>();
             _dinosaurs = new Dictionary<string, (int, decimal)>();
+
+            _random = random;
         }
 
         public void AddEmployee(string name, decimal salary, EmployeeRole role)
