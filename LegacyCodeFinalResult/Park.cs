@@ -74,13 +74,18 @@ namespace LegacyCodeFinalResult
 
         public string Run(int totalNumberOfYears)
         {
+            return Run(totalNumberOfYears, new RealRandom());
+        }
+
+        public string Run(int totalNumberOfYears, IRandom random)
+        {
             _log = string.Empty;
 
             for (int year = 0; year < totalNumberOfYears; year++)
             {
                 string n;
                 int numberOfGuests;
-                int randomBetween0and100 = new Random().Next(0, 100);
+                int randomBetween0and100 = random.Next(0, 100);
 
                 for (int period = 0; period < 13; period++)
                 {
@@ -88,11 +93,11 @@ namespace LegacyCodeFinalResult
                     {
                         if (randomBetween0and100 > 50)
                         {
-                            numberOfGuests = new Random().Next(1, 4) * randomBetween0and100;
+                            numberOfGuests = random.Next(1, 4) * randomBetween0and100;
                         }
                         else
                         {
-                            numberOfGuests = new Random().Next(75, 100);
+                            numberOfGuests = random.Next(75, 100);
                         }
 
                         _log += "\nGuests: " + numberOfGuests;
@@ -132,14 +137,14 @@ namespace LegacyCodeFinalResult
 
                 if (randomBetween0and100 < 10)
                 {
-                    n = _dinosaurs.Keys.ToArray()[new Random().Next(0, _dinosaurs.Keys.Count)];
+                    n = _dinosaurs.Keys.ToArray()[random.Next(0, _dinosaurs.Keys.Count)];
                     DinosaurDied(n);
                     _score--;
                 }
 
                 if (randomBetween0and100 > 25 && randomBetween0and100 < 75)
                 {
-                    n = _dinosaurs.Keys.ToArray()[new Random().Next(0, _dinosaurs.Keys.Count)];
+                    n = _dinosaurs.Keys.ToArray()[random.Next(0, _dinosaurs.Keys.Count)];
                     if (!n.StartsWith("T"))
                     {
                         DinosaurAdded(n);
