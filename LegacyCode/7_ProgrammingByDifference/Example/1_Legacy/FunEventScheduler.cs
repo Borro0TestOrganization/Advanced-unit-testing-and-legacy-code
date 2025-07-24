@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace LegacyCode._7_ProgrammingByDifference.Example.Legacy {
+namespace LegacyCode._7_ProgrammingByDifference.Example._1_Legacy {
     public class FunEventScheduler {
         private readonly MailService _mailService;
 
@@ -24,7 +24,7 @@ namespace LegacyCode._7_ProgrammingByDifference.Example.Legacy {
             _mailService.Send(mail);
         }
 
-        public string GetFrom(FunEvent funEvent) {
+        private string GetFrom(FunEvent funEvent) {
             string from = funEvent.Subject;
 
             if (from != null && from.Length > 0)
@@ -33,7 +33,7 @@ namespace LegacyCode._7_ProgrammingByDifference.Example.Legacy {
             return GetDefaultFrom();
         }
 
-        public string GetDefaultFrom() {
+        private string GetDefaultFrom() {
             return "ALTEN FUN EVENTS";
         }
     }
@@ -71,14 +71,14 @@ namespace LegacyCode._7_ProgrammingByDifference.Example.Legacy {
     }
 
     public class MailService {
-        public List<Mail> mails { get; internal set; }
+        public List<Mail> Mails { get; internal set; }
 
         public MailService() {
-            mails = new List<Mail>();
+            Mails = new List<Mail>();
         }
 
         public void Send(Mail mail) {
-            mails.Add(mail);
+            Mails.Add(mail);
         }
     }
 
