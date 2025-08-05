@@ -28,7 +28,7 @@
             FunEventScheduler funEventScheduler = new FunEventScheduler(mailService);
 
             FunEvent funEvent = new FunEvent(
-                "Make Your Code Faster", "2025-07-24", "18:00", "20:00", "Apeldoorn");
+                "MYCF: Make Your Code Faster", "2025-07-24", "18:00", "20:00", "Apeldoorn");
 
             // Act
             funEventScheduler.SendInvititions(funEvent);
@@ -39,7 +39,7 @@
             Assert.That(mailService.Mails[0].Location, Is.EqualTo(funEvent.Location));
             Assert.That(mailService.Mails[0].Message, Is.EqualTo("Uncle Bob"));
             Assert.That(mailService.Mails[0].To, Is.Null);
-            Assert.That(mailService.Mails[0].From, Is.EqualTo("Make"));
+            Assert.That(mailService.Mails[0].From, Is.EqualTo("MYCF"));
         }
     }
 }
