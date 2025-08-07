@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace LegacyCode._7_ProgrammingByDifference.Example._4_OtherWay {
+namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
     public class FunEventScheduler {
         protected readonly MailService _mailService;
         protected readonly Dictionary<string, string> _configuration;
@@ -50,21 +50,6 @@ namespace LegacyCode._7_ProgrammingByDifference.Example._4_OtherWay {
         protected string GetDefaultFrom() {
             return "ALTEN FUN EVENTS";
         }
-    }
-
-    public class AnonymousFunEventScheduler : FunEventScheduler {
-        public AnonymousFunEventScheduler(
-            MailService mailService, 
-            Dictionary<string, string> configuration
-            ) : base(mailService, configuration) {
-        }
-
-        /*
-        override
-        protected string GetFrom(FunEvent funEvent) {
-            return string.Empty;
-        }
-        */
     }
 
     public class BlindCarbonCopyFunEventScheduler : FunEventScheduler {
