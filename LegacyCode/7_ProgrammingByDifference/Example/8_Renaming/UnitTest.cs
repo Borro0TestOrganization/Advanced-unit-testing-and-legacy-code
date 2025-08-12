@@ -1,13 +1,13 @@
-﻿namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
+﻿namespace LegacyCode._7_ProgrammingByDifference.Example._8_Renaming {
     public class ProgrammingByDifference {
         [Test]
         public void testBlindCarbonCopyFunEventScheduler() {
             // Arrange
             MailService mailService = new MailService();
-            Dictionary<string, string> configuration = new Dictionary<string, string>();
-            configuration.Add("bcc", "true");
+            FunEventMailComposer funEventMailComposer = new FunEventMailComposer();
+            funEventMailComposer.SetBlindCarbonCopy(true);
 
-            FunEventScheduler funEventScheduler = new FunEventScheduler(mailService, configuration);
+            FunEventScheduler funEventScheduler = new FunEventScheduler(mailService, funEventMailComposer);
             FunEvent funEvent = CreateDefaultFunEvent();
 
             // Act
@@ -27,10 +27,10 @@
         public void testFunEventSchedulerWithAnonymousConfiguration() {
             // Arrange
             MailService mailService = new MailService();
-            Dictionary<string, string> configuration = new Dictionary<string, string>();
-            configuration.Add("anonymous", "true");
+            FunEventMailComposer funEventMailComposer = new FunEventMailComposer();
+            funEventMailComposer.SetAnonymous(true);
 
-            FunEventScheduler funEventScheduler = new FunEventScheduler(mailService, configuration);
+            FunEventScheduler funEventScheduler = new FunEventScheduler(mailService, funEventMailComposer);
             FunEvent funEvent = CreateDefaultFunEvent();
 
             // Act
@@ -50,9 +50,9 @@
         public void testFunEventScheduler() {
             // Arrange
             MailService mailService = new MailService();
-            Dictionary<string, string> configuration = new Dictionary<string, string>();
+            FunEventMailComposer funEventMailComposer = new FunEventMailComposer();
 
-            FunEventScheduler funEventScheduler = new FunEventScheduler(mailService, configuration);
+            FunEventScheduler funEventScheduler = new FunEventScheduler(mailService, funEventMailComposer);
             FunEvent funEvent = CreateDefaultFunEvent();
 
             // Act

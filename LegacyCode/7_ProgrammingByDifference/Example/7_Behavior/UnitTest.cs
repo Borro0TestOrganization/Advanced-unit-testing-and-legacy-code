@@ -1,11 +1,11 @@
-﻿namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
+﻿namespace LegacyCode._7_ProgrammingByDifference.Example._7_Behavior {
     public class ProgrammingByDifference {
         [Test]
         public void testBlindCarbonCopyFunEventScheduler() {
             // Arrange
             MailService mailService = new MailService();
-            Dictionary<string, string> configuration = new Dictionary<string, string>();
-            configuration.Add("bcc", "true");
+            FunEventSchedulerConfiguration configuration = new FunEventSchedulerConfiguration();
+            configuration.SetBlindCarbonCopy(true);
 
             FunEventScheduler funEventScheduler = new FunEventScheduler(mailService, configuration);
             FunEvent funEvent = CreateDefaultFunEvent();
@@ -27,8 +27,8 @@
         public void testFunEventSchedulerWithAnonymousConfiguration() {
             // Arrange
             MailService mailService = new MailService();
-            Dictionary<string, string> configuration = new Dictionary<string, string>();
-            configuration.Add("anonymous", "true");
+            FunEventSchedulerConfiguration configuration = new FunEventSchedulerConfiguration();
+            configuration.SetAnonymous(true);
 
             FunEventScheduler funEventScheduler = new FunEventScheduler(mailService, configuration);
             FunEvent funEvent = CreateDefaultFunEvent();
@@ -50,7 +50,7 @@
         public void testFunEventScheduler() {
             // Arrange
             MailService mailService = new MailService();
-            Dictionary<string, string> configuration = new Dictionary<string, string>();
+            FunEventSchedulerConfiguration configuration = new FunEventSchedulerConfiguration();
 
             FunEventScheduler funEventScheduler = new FunEventScheduler(mailService, configuration);
             FunEvent funEvent = CreateDefaultFunEvent();

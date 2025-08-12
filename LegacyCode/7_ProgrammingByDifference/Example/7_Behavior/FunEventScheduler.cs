@@ -1,13 +1,13 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
+namespace LegacyCode._7_ProgrammingByDifference.Example._7_Behavior {
     public class FunEventScheduler {
         private readonly MailService _mailService;
-        private readonly Dictionary<string, string> _configuration;
+        private readonly FunEventSchedulerConfiguration _configuration;
 
         public FunEventScheduler(
-            MailService mailService, 
-            Dictionary<string, string> configuration
+            MailService mailService,
+            FunEventSchedulerConfiguration configuration
             ) {
             _mailService = mailService;
             _configuration = configuration;
@@ -18,15 +18,51 @@ namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
 
             mail.Subject = funEvent.Subject;
             mail.Location = funEvent.Location;
-            mail.From = GetFrom(funEvent);
+            mail.From = _configuration.GetFrom(funEvent);
             mail.Message = "Uncle Bob";
 
-            ProcessParticipants(funEvent, mail);
+            _configuration.ProcessParticipants(funEvent, mail);
 
             _mailService.Send(mail);
         }
+    }
 
-        private string GetFrom(FunEvent funEvent) {
+    public class FunEventSchedulerConfiguration {
+        private readonly Dictionary<string, string> _configuration;
+
+        public FunEventSchedulerConfiguration() {
+            _configuration = new Dictionary<string, string>();
+        }
+
+        public void SetAnonymous(bool onOrOff) {
+            _configuration["anonymous"] = onOrOff ? "true" : "false";
+        }
+
+        public void SetBlindCarbonCopy(bool onOrOff) {
+            _configuration["bcc"] = onOrOff ? "true" : "false";
+        }
+
+        public void ProcessParticipants(FunEvent funEvent, Mail mail) {
+            funEvent.participants.ForEach(participant => {
+                if (IsBlindCarbonCopyEnabled()) {
+                    AddParticipantAsBlindCarbonCopy(mail, participant);
+                } else {
+                    AddParticipantAsTo(mail, participant);
+                }
+            });
+        }
+
+        private void AddParticipantAsBlindCarbonCopy(Mail mail, Participant participant) {
+            mail.BlindCarbonCopy += participant.Email;
+            mail.BlindCarbonCopy += "; ";
+        }
+
+        private void AddParticipantAsTo(Mail mail, Participant participant) {
+            mail.To += participant.Email;
+            mail.To += "; ";
+        }
+
+        public string GetFrom(FunEvent funEvent) {
             string form;
 
             if (IsAnonymousEnabled()) {
@@ -51,6 +87,10 @@ namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
             return GetDefaultFrom();
         }
 
+        private string GetDefaultFrom() {
+            return "ALTEN FUN EVENTS";
+        }
+
         private bool IsAnonymousEnabled() {
             return _configuration.ContainsKey("anonymous") &&
                 _configuration["anonymous"].Equals("true");
@@ -59,30 +99,6 @@ namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
         private bool IsBlindCarbonCopyEnabled() {
             return _configuration.ContainsKey("bcc") &&
                 _configuration["bcc"].Equals("true");
-        }
-
-        private void ProcessParticipants(FunEvent funEvent, Mail mail) {
-            funEvent.participants.ForEach(participant => {
-                if (IsBlindCarbonCopyEnabled()) {
-                    AddParticipantAsBlindCarbonCopy(mail, participant);
-                } else {
-                    AddParticipantAsTo(mail, participant);
-                }
-            });
-        }
-
-        private void AddParticipantAsBlindCarbonCopy(Mail mail, Participant participant) {
-            mail.BlindCarbonCopy += participant.Email;
-            mail.BlindCarbonCopy += "; ";
-        }
-
-        private void AddParticipantAsTo(Mail mail, Participant participant) {
-            mail.To += participant.Email;
-            mail.To += "; ";
-        }
-
-        private string GetDefaultFrom() {
-            return "ALTEN FUN EVENTS";
         }
     }
 

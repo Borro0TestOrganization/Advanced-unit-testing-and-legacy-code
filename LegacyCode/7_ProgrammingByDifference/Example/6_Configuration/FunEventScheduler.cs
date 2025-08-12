@@ -1,13 +1,13 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
+namespace LegacyCode._7_ProgrammingByDifference.Example._6_Configuration {
     public class FunEventScheduler {
         private readonly MailService _mailService;
-        private readonly Dictionary<string, string> _configuration;
+        private readonly FunEventSchedulerConfiguration _configuration;
 
         public FunEventScheduler(
-            MailService mailService, 
-            Dictionary<string, string> configuration
+            MailService mailService,
+            FunEventSchedulerConfiguration configuration
             ) {
             _mailService = mailService;
             _configuration = configuration;
@@ -29,7 +29,7 @@ namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
         private string GetFrom(FunEvent funEvent) {
             string form;
 
-            if (IsAnonymousEnabled()) {
+            if (_configuration.IsAnonymousEnabled()) {
                 form = GetAnonymousFrom();
             } else {
                 form = GetFromFunEvent(funEvent);
@@ -51,19 +51,9 @@ namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
             return GetDefaultFrom();
         }
 
-        private bool IsAnonymousEnabled() {
-            return _configuration.ContainsKey("anonymous") &&
-                _configuration["anonymous"].Equals("true");
-        }
-
-        private bool IsBlindCarbonCopyEnabled() {
-            return _configuration.ContainsKey("bcc") &&
-                _configuration["bcc"].Equals("true");
-        }
-
         private void ProcessParticipants(FunEvent funEvent, Mail mail) {
             funEvent.participants.ForEach(participant => {
-                if (IsBlindCarbonCopyEnabled()) {
+                if (_configuration.IsBlindCarbonCopyEnabled()) {
                     AddParticipantAsBlindCarbonCopy(mail, participant);
                 } else {
                     AddParticipantAsTo(mail, participant);
@@ -83,6 +73,32 @@ namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
 
         private string GetDefaultFrom() {
             return "ALTEN FUN EVENTS";
+        }
+    }
+
+    public class FunEventSchedulerConfiguration {
+        private readonly Dictionary<string, string> _configuration;
+
+        public FunEventSchedulerConfiguration() {
+            _configuration = new Dictionary<string, string>();
+        }
+
+        public void SetAnonymous(bool onOrOff) {
+            _configuration["anonymous"] = onOrOff ? "true" : "false";
+        }
+
+        public void SetBlindCarbonCopy(bool onOrOff) {
+            _configuration["bcc"] = onOrOff ? "true" : "false";
+        }
+
+        public bool IsAnonymousEnabled() {
+            return _configuration.ContainsKey("anonymous") &&
+                _configuration["anonymous"].Equals("true");
+        }
+
+        public bool IsBlindCarbonCopyEnabled() {
+            return _configuration.ContainsKey("bcc") &&
+                _configuration["bcc"].Equals("true");
         }
     }
 
