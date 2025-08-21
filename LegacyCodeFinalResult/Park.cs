@@ -28,6 +28,17 @@ namespace LegacyCodeFinalResult
             _random = random;
         }
 
+        public static void GiveEmployeesRaise(List<Employee> employees, decimal score)
+        {
+            foreach (var employee in employees)
+            {
+                if (employee.Role != EmployeeRole.IT)
+                {
+                    employee.GiveRaise(score * 10);
+                }
+            }
+        }
+
         public void AddEmployee(string name, decimal salary, EmployeeRole role)
         {
             _employees.Add(new Employee(name, salary, role));
@@ -86,50 +97,13 @@ namespace LegacyCodeFinalResult
 
             for (int year = 0; year < totalNumberOfYears; year++)
             {
-                string n;
-                int numberOfGuests;
                 int randomBetween0and100 = _random.Next(0, 100);
 
                 for (int period = 0; period < 13; period++)
                 {
                     for (int week = 0; week < 4; week++)
                     {
-                        if (randomBetween0and100 > 50)
-                        {
-                            numberOfGuests = _random.Next(1, 4) * randomBetween0and100;
-                        }
-                        else
-                        {
-                            numberOfGuests = _random.Next(75, 100);
-                        }
-
-                        _log += "\nGuests: " + numberOfGuests;
-                        _log += "\nIncome: " + numberOfGuests * 10000;
-                        _balance += numberOfGuests * 10000;
-
-                        StringBuilder stringBuilder = new StringBuilder();
-
-                        stringBuilder.AppendLine("-------Dino's-------");
-                        stringBuilder.AppendLine("Park:   " + _name);
-                        stringBuilder.AppendLine("Year:   " + year);
-                        stringBuilder.AppendLine("Period: " + period);
-                        decimal dinosaurCosts = 0;
-
-                        foreach (KeyValuePair<string, (int Amount, decimal Cost)> dinosaur in _dinosaurs)
-                        {
-                            stringBuilder.AppendLine("{");
-                            stringBuilder.AppendLine("\tName:   " + dinosaur.Key);
-                            stringBuilder.AppendLine("\tAmount: " + dinosaur.Value.Amount);
-                            stringBuilder.AppendLine("\tCosts:  " + dinosaur.Value.Cost);
-                            stringBuilder.AppendLine("}");
-
-                            dinosaurCosts += dinosaur.Value.Item1 * dinosaur.Value.Cost;
-                        }
-
-                        _balance -= dinosaurCosts;
-                        stringBuilder.AppendLine("Running costs: " + dinosaurCosts);
-
-                        _log += "\n" + stringBuilder.ToString();
+                        RunWeek(year, randomBetween0and100, period);
                     }
 
                     PayEmployees(year, period);
@@ -138,28 +112,72 @@ namespace LegacyCodeFinalResult
                     _log += "\nBalance: " + _balance;
                 }
 
+                string dinosaurName;
                 if (randomBetween0and100 < 10)
                 {
-                    n = _dinosaurs.Keys.ToArray()[_random.Next(0, _dinosaurs.Keys.Count)];
-                    DinosaurDied(n);
+                    dinosaurName = _dinosaurs.Keys.ToArray()[_random.Next(0, _dinosaurs.Keys.Count)];
+                    DinosaurDied(dinosaurName);
                     _score--;
                 }
 
                 if (randomBetween0and100 > 25 && randomBetween0and100 < 75)
                 {
-                    n = _dinosaurs.Keys.ToArray()[_random.Next(0, _dinosaurs.Keys.Count)];
-                    if (!n.StartsWith("T"))
+                    dinosaurName = _dinosaurs.Keys.ToArray()[_random.Next(0, _dinosaurs.Keys.Count)];
+                    if (!dinosaurName.StartsWith("T"))
                     {
-                        DinosaurAdded(n);
+                        DinosaurAdded(dinosaurName);
                         _score++;
                     }
                 }
+
+                GiveEmployeesRaise(_employees, _score);
 
                 _log += "\n--------Score--------";
                 _log += "\nScore: " + _score;
             }
 
             return _log;
+        }
+
+        private void RunWeek(int year, int randomBetween0and100, int period)
+        {
+            int numberOfGuests;
+            if (randomBetween0and100 > 50)
+            {
+                numberOfGuests = _random.Next(1, 4) * randomBetween0and100;
+            }
+            else
+            {
+                numberOfGuests = _random.Next(75, 100);
+            }
+
+            _log += "\nGuests: " + numberOfGuests;
+            _log += "\nIncome: " + numberOfGuests * 10000;
+            _balance += numberOfGuests * 10000;
+
+            StringBuilder stringBuilder = new StringBuilder();
+
+            stringBuilder.AppendLine("-------Dino's-------");
+            stringBuilder.AppendLine("Park:   " + _name);
+            stringBuilder.AppendLine("Year:   " + year);
+            stringBuilder.AppendLine("Period: " + period);
+            decimal dinosaurCosts = 0;
+
+            foreach (KeyValuePair<string, (int Amount, decimal Cost)> dinosaur in _dinosaurs)
+            {
+                stringBuilder.AppendLine("{");
+                stringBuilder.AppendLine("\tName:   " + dinosaur.Key);
+                stringBuilder.AppendLine("\tAmount: " + dinosaur.Value.Amount);
+                stringBuilder.AppendLine("\tCosts:  " + dinosaur.Value.Cost);
+                stringBuilder.AppendLine("}");
+
+                dinosaurCosts += dinosaur.Value.Item1 * dinosaur.Value.Cost;
+            }
+
+            _balance -= dinosaurCosts;
+            stringBuilder.AppendLine("Running costs: " + dinosaurCosts);
+
+            _log += "\n" + stringBuilder.ToString();
         }
     }
 }

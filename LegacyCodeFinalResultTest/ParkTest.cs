@@ -13,17 +13,21 @@ namespace LegacyCodeFinalResultTest
         public void SimpleTest()
         {
             // Arrange
-            FakeRandom fakeRandom = new FakeRandom(0);
+            FakeRandom fakeRandom = new FakeRandom(0.5);
             Park jurassicPark = new Park("Jurassic Park", 50000000, fakeRandom);
 
             jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);
+            jurassicPark.AddEmployee("Henry Wu", 60000, EmployeeRole.Doctor);
+            jurassicPark.AddEmployee("Dennis Nedry", 2500, EmployeeRole.IT);
 
             jurassicPark.AddDinosaur("Tyrannosaurus", 1, 8000);
+            jurassicPark.AddDinosaur("Brachiosaurus", 6, 2000);
 
             // Act
-            string result = jurassicPark.Run(1);
+            string result = jurassicPark.Run(3).Replace("\r\n", "\n");
 
-            string expected = File.ReadAllText(Path.Combine(GetParentDirectory(), "ExpectedSimpleTestResult.txt"));
+            File.WriteAllText(Path.Combine(GetParentDirectory(), "ExpectedSimpleTestResult.txt"), result); // uncomment to generate new expected output
+            string expected = File.ReadAllText(Path.Combine(GetParentDirectory(), "ExpectedSimpleTestResult.txt")).Replace("\r\n", "\n");
             Assert.That(result, Is.EqualTo(expected));
         }
 
