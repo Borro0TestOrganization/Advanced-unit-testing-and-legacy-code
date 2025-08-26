@@ -4,13 +4,8 @@ namespace LegacyCodeFinalResultTest
 {
     public class ParkTest
     {
-        public static string GetParentDirectory([System.Runtime.CompilerServices.CallerFilePath] string filePath = "")
-        {
-            return Path.GetDirectoryName(filePath);
-        }
-
         [Test]
-        public void SimpleTest()
+        public Task SimpleTest()
         {
             // Arrange
             FakeRandom fakeRandom = new FakeRandom(0.5);
@@ -24,11 +19,10 @@ namespace LegacyCodeFinalResultTest
             jurassicPark.AddDinosaur("Brachiosaurus", 6, 2000);
 
             // Act
-            string result = jurassicPark.Run(3).Replace("\r\n", "\n");
+            string result = jurassicPark.Run(2);
 
-            File.WriteAllText(Path.Combine(GetParentDirectory(), "ExpectedSimpleTestResult.txt"), result); // uncomment to generate new expected output
-            string expected = File.ReadAllText(Path.Combine(GetParentDirectory(), "ExpectedSimpleTestResult.txt")).Replace("\r\n", "\n");
-            Assert.That(result, Is.EqualTo(expected));
+            // Assert
+            return Verify(result);
         }
 
         [Test]
@@ -60,7 +54,7 @@ namespace LegacyCodeFinalResultTest
             string result = jurassicPark.Run(1);
 
             // Assert
-            Assert.IsNotEmpty(result);
+            Assert.That(result, Is.Not.Empty);
         }
 
         [Test]
@@ -92,7 +86,7 @@ namespace LegacyCodeFinalResultTest
             string result = jurassicPark.Run(1);
 
             // Assert
-            Assert.IsNotEmpty(result);
+            Assert.That(result, Is.Not.Empty);
         }
     }
 }

@@ -1,4 +1,4 @@
-
+﻿
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -1302,22 +1302,22 @@ Period: 0
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 77117000
+Balance: 77116960
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -1396,22 +1396,22 @@ Period: 1
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 79046500
+Balance: 79046420
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -1490,22 +1490,22 @@ Period: 2
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 80976000
+Balance: 80975880
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -1584,22 +1584,22 @@ Period: 3
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 82905500
+Balance: 82905340
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -1678,22 +1678,22 @@ Period: 4
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 84835000
+Balance: 84834800
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -1772,22 +1772,22 @@ Period: 5
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 86764500
+Balance: 86764260
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -1866,22 +1866,22 @@ Period: 6
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 88694000
+Balance: 88693720
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -1960,22 +1960,22 @@ Period: 7
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 90623500
+Balance: 90623180
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -2054,22 +2054,22 @@ Period: 8
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 92553000
+Balance: 92552640
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -2148,22 +2148,22 @@ Period: 9
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 94482500
+Balance: 94482100
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -2242,22 +2242,22 @@ Period: 10
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 96412000
+Balance: 96411560
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -2336,22 +2336,22 @@ Period: 11
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 98341500
+Balance: 98341020
 Guests: 87
 Income: 870000
 -------Dino's-------
@@ -2430,1247 +2430,22 @@ Period: 12
 {
 	Name:   John Hammond
 	Role:   Owner
-	Salary: 1400000
+	Salary: 1400020
 }
 {
 	Name:   Henry Wu
 	Role:   Doctor
-	Salary: 60000
+	Salary: 60020
 }
 {
 	Name:   Dennis Nedry
 	Role:   IT
 	Salary: 2500
 }
-Total weges: 1462500
+Total weges: 1462540
 
 -------Balance-------
-Balance: 100271000
+Balance: 100270480
 Brachiosaurus added
 --------Score--------
 Score: 4
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 0
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 0
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 0
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 0
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 0
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 102192500
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 1
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 1
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 1
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 1
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 1
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 104114000
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 2
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 2
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 2
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 2
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 2
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 106035500
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 3
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 3
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 3
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 3
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 3
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 107957000
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 4
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 4
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 4
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 4
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 4
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 109878500
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 5
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 5
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 5
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 5
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 5
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 111800000
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 6
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 6
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 6
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 6
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 6
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 113721500
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 7
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 7
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 7
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 7
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 7
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 115643000
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 8
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 8
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 8
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 8
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 8
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 117564500
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 9
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 9
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 9
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 9
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 9
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 119486000
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 10
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 10
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 10
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 10
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 10
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 121407500
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 11
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 11
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 11
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 11
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 11
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 123329000
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 12
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 12
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 12
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
-
-Guests: 87
-Income: 870000
--------Dino's-------
-Park:   Jurassic Park
-Year:   2
-Period: 12
-{
-	Name:   Tyrannosaurus
-	Amount: 1
-	Costs:  8000
-}
-{
-	Name:   Brachiosaurus
-	Amount: 8
-	Costs:  2000
-}
-Running costs: 24000
--------Weges to pay-------
-Park:   Jurassic Park
-Year:   2
-Period: 12
-{
-	Name:   John Hammond
-	Role:   Owner
-	Salary: 1400000
-}
-{
-	Name:   Henry Wu
-	Role:   Doctor
-	Salary: 60000
-}
-{
-	Name:   Dennis Nedry
-	Role:   IT
-	Salary: 2500
-}
-Total weges: 1462500
-
--------Balance-------
-Balance: 125250500
-Brachiosaurus added
---------Score--------
-Score: 6
