@@ -13,7 +13,7 @@ namespace LegacyCode._7_ProgrammingByDifference.Example._8_Renaming {
             _funEventMailComposer = funEventMailComposer;
         }
 
-        public void SendInvititions(FunEvent funEvent) {
+        public void SendInvitations(FunEvent funEvent) {
             Mail mail = new Mail();
 
             mail.Subject = funEvent.Subject;

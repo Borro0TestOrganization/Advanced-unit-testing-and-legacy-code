@@ -13,7 +13,7 @@ namespace LegacyCode._9_Understanding._1_Sketching {
             _configuration = configuration;
         }
 
-        public void SendInvititions(FunEvent funEvent) {
+        public void SendInvitations(FunEvent funEvent) {
             Mail mail = new Mail();
 
             mail.Subject = funEvent.Subject;

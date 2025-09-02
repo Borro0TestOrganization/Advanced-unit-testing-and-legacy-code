@@ -13,7 +13,7 @@ namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
             _configuration = configuration;
         }
 
-        public void SendInvititions(FunEvent funEvent) {
+        public void SendInvitations(FunEvent funEvent) {
             Mail mail = new Mail();
 
             mail.Subject = funEvent.Subject;

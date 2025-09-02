@@ -10,7 +10,7 @@
                 "Make Your Code Faster", "2025-07-24", "18:00", "20:00", "Apeldoorn");
 
             // Act
-            funEventScheduler.SendInvititions(funEvent);
+            funEventScheduler.SendInvitations(funEvent);
 
             // Assert
             Assert.That(mailService.Mails.Count, Is.EqualTo(1));
@@ -31,7 +31,7 @@
                 "MYCF: Make Your Code Faster", "2025-07-24", "18:00", "20:00", "Apeldoorn");
 
             // Act
-            funEventScheduler.SendInvititions(funEvent);
+            funEventScheduler.SendInvitations(funEvent);
 
             // Assert
             Assert.That(mailService.Mails.Count, Is.EqualTo(1));

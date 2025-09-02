@@ -8,7 +8,7 @@ namespace LegacyCode._7_ProgrammingByDifference.Example._2_Anonymous {
             _mailService = mailService;
         }
 
-        public void SendInvititions(FunEvent funEvent) {
+        public void SendInvitations(FunEvent funEvent) {
             Mail mail = new Mail();
 
             mail.Subject = funEvent.Subject;

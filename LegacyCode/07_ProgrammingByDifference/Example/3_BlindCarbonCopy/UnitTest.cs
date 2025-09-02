@@ -8,7 +8,7 @@
             FunEvent funEvent = CreateDefaultFunEvent();
 
             // Act
-            funEventScheduler.SendInvititions(funEvent);
+            funEventScheduler.SendInvitations(funEvent);
 
             // Assert
             Assert.That(mailService.Mails.Count, Is.EqualTo(1));
@@ -28,7 +28,7 @@
             FunEvent funEvent = CreateDefaultFunEvent();
 
             // Act
-            funEventScheduler.SendInvititions(funEvent);
+            funEventScheduler.SendInvitations(funEvent);
 
             // Assert
             Assert.That(mailService.Mails.Count, Is.EqualTo(1));
@@ -48,7 +48,7 @@
             FunEvent funEvent = CreateDefaultFunEvent();
 
             // Act
-            funEventScheduler.SendInvititions(funEvent);
+            funEventScheduler.SendInvitations(funEvent);
 
             // Assert
             Assert.That(mailService.Mails.Count, Is.EqualTo(1));
