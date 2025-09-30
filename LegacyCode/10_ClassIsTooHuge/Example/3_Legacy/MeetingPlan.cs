@@ -57,6 +57,7 @@
 
     public class Attendee {
         public string Name { get; }
+
         public Attendee(string name) {
             Name = name;
         }
