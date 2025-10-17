@@ -1,6 +1,6 @@
-using LegacyCodeFinalResult;
+using NUnit.Framework;
 
-namespace LegacyCodeFinalResultTest {
+namespace LegacyCodeFinalResult._1_Renaming {
     public class ParkTest {
         [Test]
         public void JurassicParkTest() {
@@ -18,13 +18,13 @@ namespace LegacyCodeFinalResultTest {
             jurassicPark.AddEmployee("Elle Sattler", 15000, EmployeeRole.Guide);
             jurassicPark.AddEmployee("Lan Malcolm", 160000, EmployeeRole.Guide);
 
-            jurassicPark.AddPet("Tyrannosaurus", 1, 8000);
-            jurassicPark.AddPet("Brachiosaurus", 6, 2000);
-            jurassicPark.AddPet("Gallimimus", 120, 250);
-            jurassicPark.AddPet("Triceratops", 6, 1000);
-            jurassicPark.AddPet("Velociraptor", 4, 2500);
-            jurassicPark.AddPet("Dilophosaurus", 8, 1600);
-            jurassicPark.AddPet("Parasaurolophus", 24, 500);
+            jurassicPark.AddDinosaur("Tyrannosaurus", 1, 8000);
+            jurassicPark.AddDinosaur("Brachiosaurus", 6, 2000);
+            jurassicPark.AddDinosaur("Gallimimus", 120, 250);
+            jurassicPark.AddDinosaur("Triceratops", 6, 1000);
+            jurassicPark.AddDinosaur("Velociraptor", 4, 2500);
+            jurassicPark.AddDinosaur("Dilophosaurus", 8, 1600);
+            jurassicPark.AddDinosaur("Parasaurolophus", 24, 500);
 
             // Act
             string result = jurassicPark.Run(1);
@@ -46,16 +46,16 @@ namespace LegacyCodeFinalResultTest {
             jurassicPark.AddEmployee("Nick Van Owen", 50000, EmployeeRole.Guide);
             jurassicPark.AddEmployee("Eddie Carr", 50000, EmployeeRole.Guide);
 
-            jurassicPark.AddPet("Tyrannosaurus", 3, 8000);
-            jurassicPark.AddPet("Mamenchisaurus", 6, 2000);
-            jurassicPark.AddPet("Pachycephalosaurus", 64, 500);
-            jurassicPark.AddPet("Parasaurolophus", 12, 1250);
-            jurassicPark.AddPet("Procompsognathus", 86, 250);
-            jurassicPark.AddPet("Pteranodon", 8, 3200);
-            jurassicPark.AddPet("Stegosaurus", 12, 1250);
-            jurassicPark.AddPet("Triceratops", 8, 1250);
-            jurassicPark.AddPet("Gallimimus", 120, 250);
-            jurassicPark.AddPet("Velociraptor", 14, 2500);
+            jurassicPark.AddDinosaur("Tyrannosaurus", 3, 8000);
+            jurassicPark.AddDinosaur("Mamenchisaurus", 6, 2000);
+            jurassicPark.AddDinosaur("Pachycephalosaurus", 64, 500);
+            jurassicPark.AddDinosaur("Parasaurolophus", 12, 1250);
+            jurassicPark.AddDinosaur("Procompsognathus", 86, 250);
+            jurassicPark.AddDinosaur("Pteranodon", 8, 3200);
+            jurassicPark.AddDinosaur("Stegosaurus", 12, 1250);
+            jurassicPark.AddDinosaur("Triceratops", 8, 1250);
+            jurassicPark.AddDinosaur("Gallimimus", 120, 250);
+            jurassicPark.AddDinosaur("Velociraptor", 14, 2500);
 
             // Act
             string result = jurassicPark.Run(1);

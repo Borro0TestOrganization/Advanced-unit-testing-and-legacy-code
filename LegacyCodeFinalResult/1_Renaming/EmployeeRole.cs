@@ -1,4 +1,4 @@
-﻿namespace LegacyCodeFinalResult {
+﻿namespace LegacyCodeFinalResult._1_Renaming {
     public enum EmployeeRole {
         Owner,
         Doctor,

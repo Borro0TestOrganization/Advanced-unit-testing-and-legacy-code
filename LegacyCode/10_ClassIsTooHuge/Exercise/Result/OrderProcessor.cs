@@ -34,7 +34,7 @@ namespace LegacyCode._10_ClassIsTooHuge.Exercise.Result {
             if (order != null && product != null && product.Stock >= quantity) {
                 order.Items.Add(new OrderItem(itemId, quantity));
                 _productRepository.ReduceStock(itemId, quantity);
-                _orderRepository.UpdateOrderItems(orderId, order.Items); // New repository method needed
+                _orderRepository.UpdateOrderItems(orderId, order.Items);
                 result = true;
             }
 
@@ -47,8 +47,9 @@ namespace LegacyCode._10_ClassIsTooHuge.Exercise.Result {
 
             if (order != null) {
                 OrderItem itemToRemove = order.Items.FirstOrDefault(item => item.ItemId == itemId);
+
                 if (itemToRemove != null) {
-                    _productRepository.IncreaseStock(itemId, itemToRemove.Quantity); // New repository method needed
+                    _productRepository.IncreaseStock(itemId, itemToRemove.Quantity);
                     order.Items.Remove(itemToRemove);
                     _orderRepository.UpdateOrderItems(orderId, order.Items);
                     result = true;
@@ -97,6 +98,7 @@ namespace LegacyCode._10_ClassIsTooHuge.Exercise.Result {
                 foreach (OrderItem item in order.Items) {
                     _productRepository.IncreaseStock(item.ItemId, item.Quantity);
                 }
+
                 result = _orderRepository.DeleteOrder(orderId);
             }
 
@@ -120,7 +122,7 @@ namespace LegacyCode._10_ClassIsTooHuge.Exercise.Result {
         }
 
         public bool UpdateCustomerInfo(int customerId, string newName = null, string newAddress = null) {
-            bool result = _customerRepository.UpdateCustomer(customerId, newName, newAddress); // New repository method needed
+            bool result = _customerRepository.UpdateCustomer(customerId, newName, newAddress);
             return result;
         }
 

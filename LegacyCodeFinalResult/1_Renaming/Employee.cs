@@ -1,4 +1,4 @@
-﻿namespace LegacyCodeFinalResult {
+﻿namespace LegacyCodeFinalResult._1_Renaming {
     internal class Employee {
         private static int NEXT_ID = 1;
 
