@@ -3,10 +3,18 @@ using System.Text.RegularExpressions;
 
 namespace LegacyCodeFinalResult._3_Random {
     public class ParkTest {
+        private RandomServiceSub _randomService;
+
+        [SetUp]
+        public void SetUp() {
+            _randomService = new RandomServiceSub();
+        }
+
         [Test]
         public void JurassicParkTest() {
             // Arrange
-            Park jurassicPark = new Park("Jurassic Park", 50000000);
+            
+            Park jurassicPark = new Park("Jurassic Park", 50000000, _randomService);
 
             jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);
             jurassicPark.AddEmployee("Henry Wu", 60000, EmployeeRole.Doctor);
@@ -37,7 +45,7 @@ namespace LegacyCodeFinalResult._3_Random {
         [Test]
         public void SiteBTest() {
             // Arrange
-            Park jurassicPark = new Park("Site B", 650000000);
+            Park jurassicPark = new Park("Site B", 650000000, _randomService);
 
             jurassicPark.AddEmployee("John Hammond", 450000, EmployeeRole.Owner);
             jurassicPark.AddEmployee("Peter Ludlow", 250000, EmployeeRole.Owner);
@@ -68,7 +76,7 @@ namespace LegacyCodeFinalResult._3_Random {
         [Test]
         public void ParkDebitCreditTest() {
             // Arrange
-            Park jurassicPark = new Park("Jurassic Park", 50000000);
+            Park jurassicPark = new Park("Jurassic Park", 50000000, _randomService);
 
             jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);
 

@@ -9,8 +9,9 @@ namespace LegacyCodeFinalResult._3_Random {
         private decimal _score;
         private string _historyLog;
         private ParkCycleBalance _parkCycleBalance;
+        private IRandomService _randomService;
 
-        public Park(string name, decimal balance) {
+        public Park(string name, decimal balance, IRandomService randomService) {
             _name = name;
             _balance = balance;
 
@@ -18,6 +19,7 @@ namespace LegacyCodeFinalResult._3_Random {
             _dinosaurs = new Dictionary<string, (int, decimal)>();
 
             _parkCycleBalance = new ParkCycleBalance();
+            _randomService = randomService;
         }
 
         public void AddEmployee(string name, decimal salary, EmployeeRole role) {
