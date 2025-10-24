@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace LegacyCodeFinalResult._2_DebitCredit {
+namespace LegacyCodeFinalResult._4_Score {
     public class Park {
         private string _name;
         private decimal _balance;
@@ -9,8 +9,9 @@ namespace LegacyCodeFinalResult._2_DebitCredit {
         private decimal _score;
         private string _historyLog;
         private ParkCycleBalance _parkCycleBalance;
+        private IRandomService _randomService;
 
-        public Park(string name, decimal balance) {
+        public Park(string name, decimal balance, IRandomService randomService) {
             _name = name;
             _balance = balance;
 
@@ -18,6 +19,7 @@ namespace LegacyCodeFinalResult._2_DebitCredit {
             _dinosaurs = new Dictionary<string, (int, decimal)>();
 
             _parkCycleBalance = new ParkCycleBalance();
+            _randomService = randomService;
         }
 
         public void AddEmployee(string name, decimal salary, EmployeeRole role) {
@@ -72,14 +74,14 @@ namespace LegacyCodeFinalResult._2_DebitCredit {
             for (int year = 0; year < amount; year++) {
                 string dinosaurName;
                 int amountOfGuests;
-                int randomValue = new Random().Next(0, 100);
+                int randomValue = _randomService.Next(0, 100);
 
                 for (int period = 0; period < 13; period++) {
                     for (int week = 0; week < 4; week++) {
                         if (randomValue > 50) {
-                            amountOfGuests = new Random().Next(1, 4) * randomValue;
+                            amountOfGuests = _randomService.Next(1, 4) * randomValue;
                         } else {
-                            amountOfGuests = new Random().Next(75, 100);
+                            amountOfGuests = _randomService.Next(75, 100);
                         }
 
                         _historyLog += "\nGuests: " + amountOfGuests;
@@ -123,7 +125,7 @@ namespace LegacyCodeFinalResult._2_DebitCredit {
                 }
 
                 if (randomValue < 10) {
-                    dinosaurName = _dinosaurs.Keys.ToArray()[new Random().Next(0, _dinosaurs.Keys.Count)];
+                    dinosaurName = _dinosaurs.Keys.ToArray()[_randomService.Next(0, _dinosaurs.Keys.Count)];
                     DinosaurDied(dinosaurName);
                     _score--;
                 }
@@ -135,7 +137,7 @@ namespace LegacyCodeFinalResult._2_DebitCredit {
                 }
 
                 if (randomValue > 25 && randomValue < 75) {
-                    dinosaurName = _dinosaurs.Keys.ToArray()[new Random().Next(0, _dinosaurs.Keys.Count)];
+                    dinosaurName = _dinosaurs.Keys.ToArray()[_randomService.Next(0, _dinosaurs.Keys.Count)];
                     if (!dinosaurName.StartsWith("T")) {
                         DinosaurAdded(dinosaurName);
                         _score++;

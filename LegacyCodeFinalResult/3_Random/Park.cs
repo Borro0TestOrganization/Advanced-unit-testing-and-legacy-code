@@ -74,19 +74,19 @@ namespace LegacyCodeFinalResult._3_Random {
             for (int year = 0; year < amount; year++) {
                 string dinosaurName;
                 int amountOfGuests;
-                int randomValue = new Random().Next(0, 100);
+                int randomValue = _randomService.Next(0, 100);
 
                 for (int period = 0; period < 13; period++) {
                     for (int week = 0; week < 4; week++) {
                         if (randomValue > 50) {
-                            amountOfGuests = new Random().Next(1, 4) * randomValue;
+                            amountOfGuests = _randomService.Next(1, 4) * randomValue;
                         } else {
-                            amountOfGuests = new Random().Next(75, 100);
+                            amountOfGuests = _randomService.Next(75, 100);
                         }
 
                         _historyLog += "\nGuests: " + amountOfGuests;
 
-                        decimal incomeFromGuests = amountOfGuests * 1000;
+                        decimal incomeFromGuests = amountOfGuests * 10000;
                         _parkCycleBalance.AddCredit(incomeFromGuests);
                         _historyLog += "\nIncome: " + incomeFromGuests;
 
@@ -125,7 +125,7 @@ namespace LegacyCodeFinalResult._3_Random {
                 }
 
                 if (randomValue < 10) {
-                    dinosaurName = _dinosaurs.Keys.ToArray()[new Random().Next(0, _dinosaurs.Keys.Count)];
+                    dinosaurName = _dinosaurs.Keys.ToArray()[_randomService.Next(0, _dinosaurs.Keys.Count)];
                     DinosaurDied(dinosaurName);
                     _score--;
                 }
@@ -137,7 +137,7 @@ namespace LegacyCodeFinalResult._3_Random {
                 }
 
                 if (randomValue > 25 && randomValue < 75) {
-                    dinosaurName = _dinosaurs.Keys.ToArray()[new Random().Next(0, _dinosaurs.Keys.Count)];
+                    dinosaurName = _dinosaurs.Keys.ToArray()[_randomService.Next(0, _dinosaurs.Keys.Count)];
                     if (!dinosaurName.StartsWith("T")) {
                         DinosaurAdded(dinosaurName);
                         _score++;

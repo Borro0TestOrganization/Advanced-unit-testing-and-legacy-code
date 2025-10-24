@@ -11,11 +11,11 @@ namespace LegacyCodeFinalResult._3_Random {
         }
 
         public void AddDebit(decimal debit) {
-            _debit = debit;
+            _debit += debit;
         }
 
         public void AddCredit(decimal credit) {
-            _credit = credit;
+            _credit += credit;
         }
 
         public void Reset() {

@@ -1,12 +1,20 @@
 using NUnit.Framework;
 using System.Text.RegularExpressions;
 
-namespace LegacyCodeFinalResult._2_DebitCredit {
+namespace LegacyCodeFinalResult._4_Score {
     public class ParkTest {
+        private RandomServiceSub _randomService;
+
+        [SetUp]
+        public void SetUp() {
+            _randomService = new RandomServiceSub();
+        }
+
         [Test]
         public void JurassicParkTest() {
             // Arrange
-            Park jurassicPark = new Park("Jurassic Park", 50000000);
+            
+            Park jurassicPark = new Park("Jurassic Park", 50000000, _randomService);
 
             jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);
             jurassicPark.AddEmployee("Henry Wu", 60000, EmployeeRole.Doctor);
@@ -37,7 +45,7 @@ namespace LegacyCodeFinalResult._2_DebitCredit {
         [Test]
         public void SiteBTest() {
             // Arrange
-            Park jurassicPark = new Park("Site B", 650000000);
+            Park jurassicPark = new Park("Site B", 650000000, _randomService);
 
             jurassicPark.AddEmployee("John Hammond", 450000, EmployeeRole.Owner);
             jurassicPark.AddEmployee("Peter Ludlow", 250000, EmployeeRole.Owner);
@@ -68,18 +76,19 @@ namespace LegacyCodeFinalResult._2_DebitCredit {
         [Test]
         public void ParkDebitCreditTest() {
             // Arrange
-            Park jurassicPark = new Park("Jurassic Park", 50000000);
+            int randomValue = 20;
+            _randomService.AddValue(new Tuple<int, int>(0, 100), randomValue);
+            Park jurassicPark = new Park("Jurassic Park", 50000000, _randomService);
 
             jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);
-
             jurassicPark.AddDinosaur("Tyrannosaurus", 1, 8000);
 
             // Act
             string result = jurassicPark.Run(1);
 
             // Assert
-            Assert.That(Regex.Count(result, "Credit:"), Is.EqualTo(13));
-            Assert.That(Regex.Count(result, "Debit :"), Is.EqualTo(13));
+            Assert.That(Regex.Count(result, "Credit:   3000000"), Is.EqualTo(13));
+            Assert.That(Regex.Count(result, "Debit :   1432000"), Is.EqualTo(13));
         }
 
         [Test]

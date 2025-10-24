@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace LegacyCodeFinalResult._2_DebitCredit {
+namespace LegacyCodeFinalResult._4_Score {
     public class ParkCycleBalance {
         private decimal _credit;
         private decimal _debit;
