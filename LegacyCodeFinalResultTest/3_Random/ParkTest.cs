@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Text.RegularExpressions;
 
 namespace LegacyCodeFinalResult._3_Random {
@@ -13,7 +12,6 @@ namespace LegacyCodeFinalResult._3_Random {
         [Test]
         public void JurassicParkTest() {
             // Arrange
-            
             Park jurassicPark = new Park("Jurassic Park", 50000000, _randomService);
 
             jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);

@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Text.RegularExpressions;
 
 namespace LegacyCodeFinalResult._4_Score {
@@ -13,7 +12,6 @@ namespace LegacyCodeFinalResult._4_Score {
         [Test]
         public void JurassicParkTest() {
             // Arrange
-            
             Park jurassicPark = new Park("Jurassic Park", 50000000, _randomService);
 
             jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);
@@ -103,6 +101,44 @@ namespace LegacyCodeFinalResult._4_Score {
 
             // Assert
             Assert.That(result, Is.EqualTo(1000));
+        }
+
+        [Test]
+        public void ParkSalaryIncreaseTest() {
+            // Arrange
+            int randomValue = 70;
+            _randomService.AddValue(new Tuple<int, int>(0, 100), randomValue);
+            Park jurassicPark = new Park("Jurassic Park", 50000000, _randomService);
+
+            jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);
+            jurassicPark.AddEmployee("Dennis Nedry", 2500, EmployeeRole.IT);
+            jurassicPark.AddDinosaur("Brachiosaurus", 6, 2000);
+
+            // Act
+            string result = jurassicPark.Run(1);
+
+            // Assert
+            Assert.That(Regex.Count(result, "--------Increase Salary--------"), Is.EqualTo(1));
+            Assert.That(Regex.Count(result, "{ Name: John Hammond, Increase: 200, Salary: 1400200 }"), Is.EqualTo(1));
+            Assert.That(Regex.Count(result, "{ Name: Dennis Nedry, Increase: 200, Salary: 2700 }"), Is.EqualTo(0));
+        }
+
+        [Test]
+        public void ParkSalaryIncreaseWithANegativeScoreTest() {
+            // Arrange
+            int randomValue = 20;
+            _randomService.AddValue(new Tuple<int, int>(0, 100), randomValue);
+            Park jurassicPark = new Park("Jurassic Park", 50000000, _randomService);
+
+            jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);
+            jurassicPark.AddDinosaur("Brachiosaurus", 6, 2000);
+
+            // Act
+            string result = jurassicPark.Run(1);
+
+            // Assert
+            Assert.That(Regex.Count(result, "--------Increase Salary--------"), Is.EqualTo(0));
+            Assert.That(Regex.Count(result, "{ Name: John Hammond, Increase: 200, Salary: 1400200 }"), Is.EqualTo(0));
         }
     }
 }

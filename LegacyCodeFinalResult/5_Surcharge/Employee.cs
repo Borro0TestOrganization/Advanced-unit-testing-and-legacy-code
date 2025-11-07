@@ -1,4 +1,4 @@
-﻿namespace LegacyCodeFinalResult._4_Score {
+﻿namespace LegacyCodeFinalResult._5_Surcharge {
     internal class Employee {
         private static int NEXT_ID = 1;
 

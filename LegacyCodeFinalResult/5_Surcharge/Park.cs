@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace LegacyCodeFinalResult._4_Score {
+namespace LegacyCodeFinalResult._5_Surcharge {
     public class Park {
         private string _name;
         private decimal _balance;
@@ -87,7 +87,7 @@ namespace LegacyCodeFinalResult._4_Score {
 
                         _historyLog += "\nGuests: " + amountOfGuests;
 
-                        decimal incomeFromGuests = amountOfGuests * 10000;
+                        decimal incomeFromGuests = amountOfGuests * (10000 + CalculateSurcharge());
                         _parkCycleBalance.AddCredit(incomeFromGuests);
                         _historyLog += "\nIncome: " + incomeFromGuests;
 
@@ -171,6 +171,16 @@ namespace LegacyCodeFinalResult._4_Score {
                     _historyLog += "Salary: " + employee.Salary + " }\n";
                 }
             }
+        }
+
+        public decimal CalculateSurcharge() {
+            decimal surcharge = 0;
+
+            if (_score > 0) {
+                surcharge = _score * 100;
+            }
+
+            return surcharge;
         }
     }
 }

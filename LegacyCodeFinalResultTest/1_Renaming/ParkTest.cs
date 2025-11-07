@@ -1,5 +1,3 @@
-using NUnit.Framework;
-
 namespace LegacyCodeFinalResult._1_Renaming {
     public class ParkTest {
         [Test]
