@@ -37,5 +37,6 @@ public class ClassicalSchoolTests
     {
         // Write another unit test in classical school tests, which verifies that if multiple business managers 
         // want to join event (3 or more), only 2 are accepted, and they are evenly spread between the 2 teams
+        // The names of the known business managers are: "Hanneke", "Willem", and "Thea".
     }
 }
