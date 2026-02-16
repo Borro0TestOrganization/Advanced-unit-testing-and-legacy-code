@@ -22,7 +22,7 @@ public class TestDomainLogic
         consultant.ChangeMobilityPlan(MobilityPlan.LeaseCar, now, altenLeaseCarFleet);
 
         // Result
-        Assert.That(consultant.MobilityPlan, Is.EqualTo(MobilityPlan.FixedBudget));
+        Assert.That(consultant.MobilityPlan, Is.EqualTo(MobilityPlan.LeaseCar));
         Assert.That(altenLeaseCarFleet.NumberOfLeaseCars, Is.EqualTo(11));
     }
 }
