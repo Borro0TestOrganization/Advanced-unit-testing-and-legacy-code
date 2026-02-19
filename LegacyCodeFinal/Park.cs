@@ -24,7 +24,7 @@ namespace LegacyCodeFinal {
         public void Pay(int j, int p) {
             StringBuilder stringBuilder = new StringBuilder();
 
-            stringBuilder.AppendLine("-------Weges to pay-------");
+            stringBuilder.AppendLine("-------Wages to pay-------");
             stringBuilder.AppendLine("Park:   " + _name);
             stringBuilder.AppendLine("Year:   " + j);
             stringBuilder.AppendLine("Period: " + p);
@@ -42,7 +42,7 @@ namespace LegacyCodeFinal {
             }
 
             _balance -= totalWages;
-            stringBuilder.AppendLine("Total weges: " + totalWages);
+            stringBuilder.AppendLine("Total wages: " + totalWages);
 
             _hist += stringBuilder.ToString();
         }
