@@ -13,6 +13,13 @@ Run `dotnet build` in the root of the repository.
 Run `dotnet test` from the project folder you want to test.
 Otherwise you can use your IDE to run a specific test.
 
+### VSCode
+
+- Make sure you have C# Dev Kit extension installed.
+- Open the desired solution (ctrl + shift + P -> .NET Open Solution).
+- Open test explorer menu on the left menu bar.
+- Discover tests and select a test to run.
+
 ## Git on windows bug
 
 You might need to configure your git on windows with this (run with admin powershell):
