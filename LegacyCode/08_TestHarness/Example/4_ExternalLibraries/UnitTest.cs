@@ -43,6 +43,7 @@ namespace LegacyCode._08_TestHarness.Example._4_ExternalLibraries {
         }
 
         [Test]
+        [Ignore (reason: "Doesn't run on linux container")]
         public void TestWithoutUsingFakeDependingOnHardware() {
             // Arrange
             IWeatherService weatherService = new WeatherService("Com1", 1000);

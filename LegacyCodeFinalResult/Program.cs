@@ -1,8 +1,10 @@
-﻿using naming = LegacyCodeFinalResult._1_Renaming;
+﻿#pragma warning disable CS8981 // The type name only contains lower-cased ascii characters. Such names may become reserved for the language.
+using naming = LegacyCodeFinalResult._1_Renaming;
 using debitCredit = LegacyCodeFinalResult._2_DebitCredit;
 using random = LegacyCodeFinalResult._3_Random;
 using score = LegacyCodeFinalResult._4_Score;
 using surcharge = LegacyCodeFinalResult._5_Surcharge;
+#pragma warning restore CS8981 // The type name only contains lower-cased ascii characters. Such names may become reserved for the language.
 
 {
     naming.Park jurassicPark = new naming.Park("Jurassic Park", 50000000);
