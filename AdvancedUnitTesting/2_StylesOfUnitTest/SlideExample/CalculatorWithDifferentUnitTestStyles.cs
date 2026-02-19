@@ -36,7 +36,7 @@ public class StateBasedCalculator
 
 public class CommunicationBasedCalculator
 {
-    private SumDatabase sumDatabase;
+    private SumDatabase sumDatabase = new();
 
     public void Sum(string numbers)
     {
@@ -53,7 +53,7 @@ public class CommunicationBasedCalculator
 
 public class SumDatabase
 {
-    public void StoreSum(int result) {}
+    public void StoreSum(int result) { }
 }
 
 public class CalculatorTest

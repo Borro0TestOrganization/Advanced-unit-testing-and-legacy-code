@@ -1,6 +1,5 @@
 ﻿namespace LegacyCodeFinalResult._5_Surcharge {
     internal class RandomServiceSub : IRandomService {
-        private int returnValue = 0;
         private readonly IDictionary<Tuple<int, int>, int> _values;
 
         public RandomServiceSub() {

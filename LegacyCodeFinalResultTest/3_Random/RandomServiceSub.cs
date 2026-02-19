@@ -1,6 +1,5 @@
 ﻿namespace LegacyCodeFinalResult._3_Random {
     internal class RandomServiceSub : IRandomService {
-        private int returnValue = 0;
         private readonly IDictionary<Tuple<int, int>, int> _values;
 
         public RandomServiceSub() {
