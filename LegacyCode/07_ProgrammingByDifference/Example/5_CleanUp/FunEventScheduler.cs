@@ -27,15 +27,15 @@ namespace LegacyCode._7_ProgrammingByDifference.Example._5_CleanUp {
         }
 
         private string GetFrom(FunEvent funEvent) {
-            string form;
+            string from;
 
             if (IsAnonymousEnabled()) {
-                form = GetAnonymousFrom();
+                from = GetAnonymousFrom();
             } else {
-                form = GetFromFunEvent(funEvent);
+                from = GetFromFunEvent(funEvent);
             }
 
-            return form;
+            return from;
         }
 
         private string GetAnonymousFrom() {
