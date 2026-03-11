@@ -1,0 +1,6 @@
+Team 1:
+Alice
+Peter
+Team 2:
+Bob
+Sandra
