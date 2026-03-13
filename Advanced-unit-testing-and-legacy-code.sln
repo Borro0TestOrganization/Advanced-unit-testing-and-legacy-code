@@ -1,10 +1,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36811.4 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11605.240 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedUnitTesting", "AdvancedUnitTesting\AdvancedUnitTesting.csproj", "{8C460E13-0C09-3551-166F-C16F2399DA81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyCodeHomework", "LegacyCodeHomework\LegacyCodeHomework.csproj", "{BF4AA01A-182F-0AF9-99FE-3D76F6A57DB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyCodeArchaeology", "LegacyCodeArchaeology\LegacyCodeArchaeology.csproj", "{BF4AA01A-182F-0AF9-99FE-3D76F6A57DB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LegacyCode", "LegacyCode\LegacyCode.csproj", "{1FDDA822-451B-46CE-88E2-665906E7BDAD}"
 EndProject
