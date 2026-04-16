@@ -6,6 +6,7 @@ namespace LegacyCodeFinalResult._3_DinoAge {
         private IDictionary<string, (IList<Dinosaur> dinosaurs, decimal cost)> _sauria;
 
         public Sauria(IRandomService randomService) {
+            _randomService = randomService;
             _sauria = new Dictionary<string, (IList<Dinosaur>, decimal)>();
         }
 

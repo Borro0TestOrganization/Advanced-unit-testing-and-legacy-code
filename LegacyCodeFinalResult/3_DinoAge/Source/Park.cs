@@ -16,7 +16,7 @@ namespace LegacyCodeFinalResult._3_DinoAge {
             _balance = balance;
 
             _employees = new List<Employee>();
-            _sauria = new Sauria(_randomService);
+            _sauria = new Sauria(randomService);
 
             _parkCycleBalance = new ParkCycleBalance();
             _randomService = randomService;
