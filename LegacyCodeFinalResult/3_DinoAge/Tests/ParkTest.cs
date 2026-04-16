@@ -160,5 +160,25 @@ namespace LegacyCodeFinalResult._3_DinoAge {
             Assert.That(Regex.Count(result, "Credit:   2912000"), Is.EqualTo(13));
             Assert.That(Regex.Count(result, "Credit:   2968000"), Is.EqualTo(13));
         }
+
+        [Test]
+        public void AgeDinosaurForFourYearsTest() {
+            // Arrange
+            int randomValue = 20;
+            _randomService.AddValue(new Tuple<int, int>(0, 100), randomValue);
+            Park jurassicPark = new Park("Jurassic Park", 50000000, _randomService);
+
+            jurassicPark.AddEmployee("John Hammond", 1400000, EmployeeRole.Owner);
+            jurassicPark.AddDinosaur("Brachiosaurus", 1, 2000);
+
+            // Act
+            string result = jurassicPark.Run(4);
+
+            // Assert
+            Assert.That(Regex.Count(result, "Age:   0"), Is.EqualTo(52));
+            Assert.That(Regex.Count(result, "Age:   1"), Is.EqualTo(52));
+            Assert.That(Regex.Count(result, "Age:   2"), Is.EqualTo(52));
+            Assert.That(Regex.Count(result, "Age:   3"), Is.EqualTo(52));
+        }
     }
 }

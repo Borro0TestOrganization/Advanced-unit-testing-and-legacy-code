@@ -5,7 +5,7 @@ namespace LegacyCodeFinalResult._3_DinoAge {
         private string _name;
         private decimal _balance;
         private List<Employee> _employees;
-        private Dictionary<string, (int amount, decimal cost)> _dinosaurs;
+        private Sauria _sauria;
         private decimal _score;
         private string _historyLog;
         private ParkCycleBalance _parkCycleBalance;
@@ -16,7 +16,7 @@ namespace LegacyCodeFinalResult._3_DinoAge {
             _balance = balance;
 
             _employees = new List<Employee>();
-            _dinosaurs = new Dictionary<string, (int, decimal)>();
+            _sauria = new Sauria(_randomService);
 
             _parkCycleBalance = new ParkCycleBalance();
             _randomService = randomService;
@@ -53,18 +53,18 @@ namespace LegacyCodeFinalResult._3_DinoAge {
         }
 
         public void AddDinosaur(string name, int amount, decimal cost) {
-            _dinosaurs.Add(name, (amount, cost));
+            _sauria.AddDinosaur(name, amount, cost);
         }
 
         public void DinosaurAdded(string name) {
             _historyLog += "\n" + name + " added";
-            _dinosaurs[name] = (_dinosaurs[name].amount + 1, _dinosaurs[name].cost);
+            _sauria.DinosaurAdded(name);
             _score += 1;
         }
 
         public void DinosaurDied(string name) {
             _historyLog += "\n" + name + " died";
-            _dinosaurs[name] = (_dinosaurs[name].amount - 1, _dinosaurs[name].cost);
+            _sauria.DinosaurDied(name);
             _score -= 1;
         }
 
@@ -90,29 +90,8 @@ namespace LegacyCodeFinalResult._3_DinoAge {
                         decimal incomeFromGuests = amountOfGuests * (10000 + CalculateSurcharge());
                         _parkCycleBalance.AddCredit(incomeFromGuests);
                         _historyLog += "\nIncome: " + incomeFromGuests;
-
-                        StringBuilder stringBuilder = new StringBuilder();
-
-                        stringBuilder.AppendLine("-------Dino's-------");
-                        stringBuilder.AppendLine("Park:   " + _name);
-                        stringBuilder.AppendLine("Year:   " + year);
-                        stringBuilder.AppendLine("Period: " + period);
-                        decimal runningCosts = 0;
-
-                        foreach (KeyValuePair<string, (int amount, decimal cost)> dinosaur in _dinosaurs) {
-                            stringBuilder.AppendLine("{");
-                            stringBuilder.AppendLine("\tName:   " + dinosaur.Key);
-                            stringBuilder.AppendLine("\tAmount: " + dinosaur.Value.amount);
-                            stringBuilder.AppendLine("\tCosts:  " + dinosaur.Value.cost);
-                            stringBuilder.AppendLine("}");
-
-                            runningCosts += dinosaur.Value.amount * dinosaur.Value.cost;
-                        }
-
-                        _parkCycleBalance.AddDebit(runningCosts);
-                        stringBuilder.AppendLine("Running costs: " + runningCosts);
-
-                        _historyLog += "\n" + stringBuilder.ToString();
+                        
+                        ProcessSauriaPeriod(year, period);
                     }
 
                     Pay(year, period);
@@ -126,7 +105,7 @@ namespace LegacyCodeFinalResult._3_DinoAge {
                 }
 
                 if (randomValue < 10) {
-                    dinosaurName = _dinosaurs.Keys.ToArray()[_randomService.Next(0, _dinosaurs.Keys.Count)];
+                    dinosaurName = _sauria.PickRandomDinosaurName();
                     DinosaurDied(dinosaurName);
                     _score--;
                 }
@@ -138,7 +117,7 @@ namespace LegacyCodeFinalResult._3_DinoAge {
                 }
 
                 if (randomValue > 25 && randomValue < 75) {
-                    dinosaurName = _dinosaurs.Keys.ToArray()[_randomService.Next(0, _dinosaurs.Keys.Count)];
+                    dinosaurName = _sauria.PickRandomDinosaurName();
                     if (!dinosaurName.StartsWith("T")) {
                         DinosaurAdded(dinosaurName);
                         _score++;
@@ -149,9 +128,27 @@ namespace LegacyCodeFinalResult._3_DinoAge {
                 _historyLog += "\nScore: " + _score;
 
                 GiveRaiseBasedOnAddedScore(_score - scoreFromLastYear);
+
+                _sauria.NextYear();
             }
 
             return _historyLog;
+        }
+
+        private void ProcessSauriaPeriod(int year, int period) {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.AppendLine("-------Dino's-------");
+            stringBuilder.AppendLine("Park:   " + _name);
+            stringBuilder.AppendLine("Year:   " + year);
+            stringBuilder.AppendLine("Period: " + period);
+
+            (string processPeriodLog, decimal runningCosts) = _sauria.ProcessPeriod();
+            stringBuilder.Append(processPeriodLog);
+
+            _parkCycleBalance.AddDebit(runningCosts);
+            stringBuilder.AppendLine("Running costs: " + runningCosts);
+
+            _historyLog += "\n" + stringBuilder.ToString();
         }
 
         public void GiveRaiseBasedOnAddedScore(decimal addedScore) {
