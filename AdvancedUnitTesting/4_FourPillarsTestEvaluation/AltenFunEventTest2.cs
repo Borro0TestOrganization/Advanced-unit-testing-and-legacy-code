@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace AdvancedUnitTesting.FourPillarsTestEvaluation;
 
 // Looking at the four pillars, is there a pillar which gets violated in this test?
@@ -11,8 +13,12 @@ public class Test2
         var altenFunEvent = new AltenFunEvent(maxAmountOfParticipants);
         var sut = new FunEventHost(altenFunEvent);
 
+        string sourceDir = GetCurrentSourceDirectory();
+        string participantsFilePath = Path.Combine(sourceDir, "AltenFunEventTest2Participants.txt");
+        string expectedReportFilePath = Path.Combine(sourceDir, "AltenFunEventTest2ExpectedReport.txt");
+
         // Read participants from file
-        var participants = File.ReadAllLines("..\\..\\..\\..\\AdvancedUnitTesting\\4_FourPillarsTestEvaluation\\AltenFunEventTest2Participants.txt");
+        var participants = File.ReadAllLines(participantsFilePath);
         foreach (var participant in participants)
         {
             sut.RequestToJoin(participant);
@@ -22,7 +28,13 @@ public class Test2
         string report = sut.ReportParticipants();
 
         // Assert
-        var expectedReport = File.ReadAllText("..\\..\\..\\..\\AdvancedUnitTesting\\4_FourPillarsTestEvaluation\\AltenFunEventTest2ExpectedReport.txt");
+        var expectedReport = File.ReadAllText(expectedReportFilePath);
         Assert.That(report, Is.EqualTo(expectedReport));
+    }
+
+    // A helper method that captures the file path of whatever calls it
+    private static string GetCurrentSourceDirectory([CallerFilePath] string sourceFilePath = "")
+    {
+        return Path.GetDirectoryName(sourceFilePath);
     }
 }
